@@ -5,9 +5,9 @@
   <subtitle>记录linux,python,自动化，阅读，小技巧</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="www.25sharetime.com/"/>
+  <link href="https://e.coding.net/zzzhbr/"/>
   <updated>2019-09-06T06:11:23.609Z</updated>
-  <id>www.25sharetime.com/</id>
+  <id>https://e.coding.net/zzzhbr/</id>
   
   <author>
     <name>25℃</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="www.25sharetime.com/2019/09/06/hello-world/"/>
-    <id>www.25sharetime.com/2019/09/06/hello-world/</id>
+    <link href="https://e.coding.net/zzzhbr/2019/09/06/hello-world/"/>
+    <id>https://e.coding.net/zzzhbr/2019/09/06/hello-world/</id>
     <published>2019-09-06T06:05:14.795Z</published>
     <updated>2019-09-06T06:11:23.609Z</updated>
     
@@ -43,8 +43,8 @@
   
   <entry>
     <title>堡垒机-jumpserver</title>
-    <link href="www.25sharetime.com/2019/09/06/%E5%A0%A1%E5%9E%92%E6%9C%BA-jumpserver/"/>
-    <id>www.25sharetime.com/2019/09/06/堡垒机-jumpserver/</id>
+    <link href="https://e.coding.net/zzzhbr/2019/09/06/%E5%A0%A1%E5%9E%92%E6%9C%BA-jumpserver/"/>
+    <id>https://e.coding.net/zzzhbr/2019/09/06/堡垒机-jumpserver/</id>
     <published>2019-09-06T06:05:14.795Z</published>
     <updated>2019-09-06T06:18:08.870Z</updated>
     
@@ -58,14 +58,14 @@
     
     
     
-      <category term="-linux - jumpserver" scheme="www.25sharetime.com/tags/linux-jumpserver/"/>
+      <category term="-linux - jumpserver" scheme="https://e.coding.net/zzzhbr/tags/linux-jumpserver/"/>
     
   </entry>
   
   <entry>
     <title>git+hexo打造属于你的网站</title>
-    <link href="www.25sharetime.com/2019/09/06/git+hexo%E6%89%93%E9%80%A0%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99/"/>
-    <id>www.25sharetime.com/2019/09/06/git+hexo打造属于你的网站/</id>
+    <link href="https://e.coding.net/zzzhbr/2019/09/06/git+hexo%E6%89%93%E9%80%A0%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99/"/>
+    <id>https://e.coding.net/zzzhbr/2019/09/06/git+hexo打造属于你的网站/</id>
     <published>2019-09-06T06:05:14.794Z</published>
     <updated>2019-09-06T06:14:46.615Z</updated>
     
@@ -79,10 +79,10 @@
     </summary>
     
     
-      <category term="网站" scheme="www.25sharetime.com/categories/%E7%BD%91%E7%AB%99/"/>
+      <category term="网站" scheme="https://e.coding.net/zzzhbr/categories/%E7%BD%91%E7%AB%99/"/>
     
     
-      <category term="hexo" scheme="www.25sharetime.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://e.coding.net/zzzhbr/tags/hexo/"/>
     
   </entry>
   
