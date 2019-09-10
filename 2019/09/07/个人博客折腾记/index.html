@@ -20,6 +20,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -33,9 +34,9 @@
     copycode: {"enable":true,"show_result":true,"style":"mac"},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
-    lazyload: false,
+    lazyload: true,
     pangu: false,
     algolia: {
       appID: '',
@@ -64,16 +65,10 @@
 <meta property="og:site_name" content="25℃ Share Time">
 <meta property="og:description" content="前言：现在博客网站极多，但是是不是总感觉有些地方不满意？又或者看到有些人的博客感觉做的很漂亮，那他们又是怎么做的呢？">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/05/1567643923207-1567643923235.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567851460049-1567851460058.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567851616303-1567851616304.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567850866415-1567850866459.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567852282030-1567852282031.png">
 <meta property="og:updated_time" content="2019-09-07T13:17:21.428Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客折腾记">
 <meta name="twitter:description" content="前言：现在博客网站极多，但是是不是总感觉有些地方不满意？又或者看到有些人的博客感觉做的很漂亮，那他们又是怎么做的呢？">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/05/1567643923207-1567643923235.png">
   <link rel="canonical" href="http://25share.com/2019/09/07/个人博客折腾记/">
 
 
@@ -257,7 +252,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tag"></i> <br>标签<span class="badge">9</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tag"></i> <br>标签<span class="badge">11</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -432,7 +427,7 @@
 <p>如果输入npm install -g hexo-cli遇到以下报错</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm should be run outside of the node repl, in your normal shell.</span><br><span class="line">(Press Control-D to exit.)</span><br></pre></td></tr></table></figure>
 
-<p>在自己的硬盘下创建一个目录，最好不要有中文路径，我在E盘创建了个Myblog目录<br>然后进入<code>E:\Myblog</code>这个目录里，按住shift再右键<br><img src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/05/1567643923207-1567643923235.png" alt="title"><br>点击打开在此处打开命令行终端</p>
+<p>在自己的硬盘下创建一个目录，最好不要有中文路径，我在E盘创建了个Myblog目录<br>然后进入<code>E:\Myblog</code>这个目录里，按住shift再右键<br><img alt="title" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/05/1567643923207-1567643923235.png"><br>点击打开在此处打开命令行终端</p>
 <p>这里的意思是命令行在<code>E:\Myblog</code>这个目录里运行，同打开cmd然后cd切换到Mylog下面一样的效果<br>为了方便以后就会说在<code>E:\Myblog</code>目录下打开命令终端<br><strong>（请注意：其实几乎后面所有的命令行操作都是在这个目录下运行的）</strong></p>
 <p>然后输入命令</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. npm install -g express</span><br><span class="line"><span class="number">2</span>. npm install hexo-cli -g</span><br><span class="line"><span class="number">3</span>. hexo init blog</span><br><span class="line"><span class="number">4</span>. <span class="built_in">cd</span> blog</span><br><span class="line"><span class="number">5</span>. npm install</span><br><span class="line"><span class="number">6</span>. hexo server</span><br></pre></td></tr></table></figure>
@@ -526,8 +521,8 @@
 
 <p>然后你在<code>themes\next\source\css\</code>下面新建一个<code>_custom</code>目录，接着在这个牡蛎里面新建custom.styl加上样式就可以了；</p>
 <h3 id="坑8"><a href="#坑8" class="headerlink" title="坑8?"></a>坑8?</h3><p>网页的动态线条的效果，<br>7.4的非常简单，只需要在主题配置文件中，将</p>
-<p><img src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567851460049-1567851460058.png" alt="title"><br>这几个中想要的效果把<code>false</code>改成<code>true</code>就可以调用了，然后接着搜索<br><img src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567851616303-1567851616304.png" alt="title"><br>把这几个<code>:</code>后面的内容一一对应上面的照着复制下来就行了，<br>然后再刷新页面效果就有了</p>
-<h3 id="坑9"><a href="#坑9" class="headerlink" title="坑9?"></a>坑9?</h3><p>在custom.styl里添加边框阴影<br><img src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567850866415-1567850866459.png" alt="title"><br>类似这样，首先说下，用网上的方法，这个在Mist主题下首页是没有实现的，但是文章里是实现了，应该是主题样式的原因，，可能懂web前端的就能实现了，如果不懂又想要首页也有，可以用Pisces，这个样式可以实现</p>
+<p><img alt="title" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567851460049-1567851460058.png"><br>这几个中想要的效果把<code>false</code>改成<code>true</code>就可以调用了，然后接着搜索<br><img alt="title" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567851616303-1567851616304.png"><br>把这几个<code>:</code>后面的内容一一对应上面的照着复制下来就行了，<br>然后再刷新页面效果就有了</p>
+<h3 id="坑9"><a href="#坑9" class="headerlink" title="坑9?"></a>坑9?</h3><p>在custom.styl里添加边框阴影<br><img alt="title" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567850866415-1567850866459.png"><br>类似这样，首先说下，用网上的方法，这个在Mist主题下首页是没有实现的，但是文章里是实现了，应该是主题样式的原因，，可能懂web前端的就能实现了，如果不懂又想要首页也有，可以用Pisces，这个样式可以实现</p>
 <p>我用的是Mist样式，这里贴上我做的本站一些效果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br></pre></td><td class="code"><pre><span class="line">// Custom styles.</span><br><span class="line">//首页文章阴影样式</span><br><span class="line">.post &#123;</span><br><span class="line">    margin-top: 60px;</span><br><span class="line">    margin-bottom: 60px;</span><br><span class="line">    padding: 65px; </span><br><span class="line">    -webkit-box-shadow: 0 0 14px rgba(65,199,191, .5);</span><br><span class="line">    -moz-box-shadow: 0 0 14px rgba(65,199,191, .5);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//文章标题样式</span><br><span class="line">.posts-expand .post-meta .post&#123;</span><br><span class="line">    margin-top: 60px;</span><br><span class="line">    margin-bottom: 60px;</span><br><span class="line">    padding: 65px; </span><br><span class="line">    -webkit-box-shadow: 0 0 14px rgba(65,199,191, .5);</span><br><span class="line">    -moz-box-shadow: 0 0 14px rgba(65,199,191, .5);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 鼠标移动至文章标题时的效果</span><br><span class="line">.posts-expand .post-title-link::before &#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">    position: absolute;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 2px;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    background-color: #ea481e;</span><br><span class="line">    visibility: hidden;</span><br><span class="line">    -webkit-transform: scaleX(0);</span><br><span class="line">    -moz-transform: scaleX(0);</span><br><span class="line">    -ms-transform: scaleX(0);</span><br><span class="line">    -o-transform: scaleX(0);</span><br><span class="line">    transform: scaleX(0);</span><br><span class="line">    transition-duration: 0.2s;</span><br><span class="line">    transition-timing-function: ease-in-out;</span><br><span class="line">    transition-delay: 0s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.posts-expand .post-title &#123;</span><br><span class="line">  font-size: 30px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  background-color: #41c7bf;</span><br><span class="line">  border-radius:.3em;</span><br><span class="line">  line-height:1.5em;</span><br><span class="line">  padding: 65px;</span><br><span class="line">  padding-bottom:.12em;</span><br><span class="line">  padding-top:.12em;</span><br><span class="line">  box-shadow:2px 2px 7px #9fb6cd;</span><br><span class="line"></span><br><span class="line">  margin: 8px 4px 8px 4px;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">  +mobile() &#123;</span><br><span class="line">    font-size: 22px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.posts-expand .post-title a:hover &#123;</span><br><span class="line">  color: #ea481e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//首页头部样式</span><br><span class="line">.header &#123;</span><br><span class="line">  background: #41c7bf;</span><br><span class="line">  font-size: 20px;</span><br><span class="line">  font-color: #ea481e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//首页尾部样式</span><br><span class="line">.footer &#123;</span><br><span class="line">    background: none;</span><br><span class="line">    font-size: 16px;</span><br><span class="line">&#125;</span><br><span class="line">.footer-inner &#123;</span><br><span class="line">    text-align: ledt;</span><br><span class="line">    color: #41c7bf;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//侧边栏信息样式修改</span><br><span class="line">.site-author-name &#123;</span><br><span class="line">    margin: 35px 0 0;</span><br><span class="line">    color: #ea481e;</span><br><span class="line">    font-family: &apos;Comic Sans MS&apos;, sans-serif;</span><br><span class="line">	font-size: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//侧栏按钮样式</span><br><span class="line">.sidebar-toggle &#123;</span><br><span class="line">    background: #41c7bf;</span><br><span class="line">&#125;</span><br><span class="line">.back-to-top &#123;</span><br><span class="line">    background: #41c7bf;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//文章目录样式</span><br><span class="line">.post-toc .nav .active&gt;a &#123;</span><br><span class="line">    color: #41c7bf;</span><br><span class="line">&#125;</span><br><span class="line">.post-toc ol a:hover &#123;</span><br><span class="line">    color: #41c7bf;</span><br><span class="line">&#125;</span><br><span class="line">.sidebar-nav .sidebar-nav-active:hover &#123;</span><br><span class="line">    color: #FFFFFF;</span><br><span class="line">&#125;</span><br><span class="line">a &#123;</span><br><span class="line">	border-bottom-style:outset;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//首页阅读全文样式</span><br><span class="line">.post-button &#123;</span><br><span class="line">    margin-top: 30px;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">.post-button .btn &#123;</span><br><span class="line">    color: #000000;</span><br><span class="line">    font-size: 15px;</span><br><span class="line">    background: #41c7bf;</span><br><span class="line">    border-radius: 16px;</span><br><span class="line">    line-height: 2;</span><br><span class="line">    margin: 0 4px 8px 4px;</span><br><span class="line">    padding: 0 20px;</span><br><span class="line">&#125;</span><br><span class="line">.post-button a&#123;</span><br><span class="line">  border-bottom: 1px solid #666;</span><br><span class="line">&#125;</span><br><span class="line">.post-button a:hover &#123;</span><br><span class="line">  color: #ea481e;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -535,7 +530,7 @@
 <p>有些效果没有做，像美化代码块，改字体，添加点击爆炸/桃心</p>
 <p>到这里基本上美化就已经结束了！</p>
 <p>不过字体大小真应该改改了，H1竟然感觉和Title字体都差不多大，甚至还大了</p>
-<h3 id="坑10"><a href="#坑10" class="headerlink" title="坑10?"></a>坑10?</h3><p>添加分享按钮<br>主题配置文件中默认就有AddThis；所以这个是最简单的，官网有说明，但是教程可能不是新的，新版的AddThis获取ID的方式更简单了，<br>在<a href="https://www.addthis.com/dashboard" target="_blank" rel="noopener">ADDThis</a>注册个账号，然后按着步骤选你要分享的平台和样式，最后就是获取ID就行<br><img src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567852282030-1567852282031.png" alt="title"><br>把Code Only View打开，然后选择wordpress，因为这个最简单，得到的就是ID，把这串字符复制黏贴进主题配置文件的add_this_id:后面就行了，注意<code>:</code>后面有个空格</p>
+<h3 id="坑10"><a href="#坑10" class="headerlink" title="坑10?"></a>坑10?</h3><p>添加分享按钮<br>主题配置文件中默认就有AddThis；所以这个是最简单的，官网有说明，但是教程可能不是新的，新版的AddThis获取ID的方式更简单了，<br>在<a href="https://www.addthis.com/dashboard" target="_blank" rel="noopener">ADDThis</a>注册个账号，然后按着步骤选你要分享的平台和样式，最后就是获取ID就行<br><img alt="title" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/07/1567852282030-1567852282031.png"><br>把Code Only View打开，然后选择wordpress，因为这个最简单，得到的就是ID，把这串字符复制黏贴进主题配置文件的add_this_id:后面就行了，注意<code>:</code>后面有个空格</p>
 <p>但是家里这个分享，感觉页面加载有些慢了</p>
 <h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>未实现的效果：</p>
 <ol>
@@ -676,8 +671,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/07/readtest/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/2019/09/07/git+hexo打造属于你的网站/" rel="next" title="git+hexo打造属于你的网站">
+                  <i class="fa fa-chevron-left"></i> git+hexo打造属于你的网站
                 </a>
               
             </div>
@@ -784,7 +779,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -911,16 +906,15 @@
     
   
     
-    
-  
-    
   
   <script color='0,0,255' opacity='0.2' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js"></script>
-  <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three-waves.min.js"></script>
   <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js"></script>
   <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_sphere.min.js"></script>
 <script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
@@ -1000,7 +994,7 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
 <script type="text/javascript" src="/dist/Meting.min.js"></script>
 <!--崩溃欺骗-->
   <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
-  <script  var alpha = 30 src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"type="text/javascript"></script>
+
 </body>
 </html>
 
