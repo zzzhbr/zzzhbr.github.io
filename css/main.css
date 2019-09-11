@@ -1824,7 +1824,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #debba4;
+  background: #422d78;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2247,6 +2247,25 @@ article:last-child .post-eof {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.popular-posts-header {
+  border-bottom: 1px solid #eee;
+  display: block;
+  font-size: 1.275em;
+  margin-bottom: 10px;
+  margin-top: 60px;
+}
+ul.popular-posts {
+  padding: 0;
+}
+ul.popular-posts .popular-posts-item {
+  margin-left: 2em;
+}
+ul.popular-posts .popular-posts-item .popular-posts-title {
+  font-size: 1.015em;
+  font-weight: normal;
+  line-height: 2.4;
+  margin: 0;
 }
 .category-all-page .category-all-title {
   text-align: center;
@@ -2906,4 +2925,10 @@ code {
   background: rgba(65,199,191,0.42);
   margin: 2px;
   border: 1px solid #ea481e;
+}
+#days {
+  display: block;
+  color: #07b39b;
+  font-size: 13px;
+  margin-top: 15px;
 }
