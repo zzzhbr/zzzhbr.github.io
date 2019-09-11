@@ -58,9 +58,9 @@
       <category term="tips" scheme="http://25share.com/categories/tips/"/>
     
     
-      <category term="linux" scheme="http://25share.com/tags/linux/"/>
-    
       <category term="vmware" scheme="http://25share.com/tags/vmware/"/>
+    
+      <category term="linux" scheme="http://25share.com/tags/linux/"/>
     
   </entry>
   
