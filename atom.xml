@@ -5,9 +5,9 @@
   <subtitle>记录linux,python,自动化，阅读，小技巧</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://25share.com/"/>
-  <updated>2019-09-10T04:41:20.046Z</updated>
-  <id>http://25share.com/</id>
+  <link href="https://25share.com/"/>
+  <updated>2019-09-11T06:50:02.984Z</updated>
+  <id>https://25share.com/</id>
   
   <author>
     <name>25℃</name>
@@ -17,9 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>linux是什么</title>
+    <link href="https://25share.com/2019/09/11/linux%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F.html"/>
+    <id>https://25share.com/2019/09/11/linux是什么？.html</id>
+    <published>2019-09-11T06:49:07.028Z</published>
+    <updated>2019-09-11T06:50:02.984Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>前言：</p><p>​    linux是什么？<br>​    linux能干什么？<br>​    学linux做什么？</p><a id="more"></a><p>后台使用系统统计网站：<a href="https://www.netcraft.com" target="_blank" rel="noopener">https://www.netcraft.com</a></p><p>例如：</p><ul><li>博客园：<a href="https://www.cnblogs.com/zzzhbr/" target="_blank" rel="noopener">https://www.cnblogs.com/zzzhbr/</a></li><li>淘宝网：<a href="http://www.taobao.com" target="_blank" rel="noopener">www.taobao.com</a></li></ul><p>由此可以看出我们经常访问的网站，大多都是由linux作为底层操作系统来提供服务的；<br>也就是 linux上安装web服务，然后web服务向我们提供我们想要看见的内容！</p><p>所以如果你也想要自己建个博客网站或者购物网站，那么linux就是最基础的知识了；</p><p>还有就是例如电视上经常见到的那些电脑高手（黑客高手），总是手指飞快的在敲着，然后屏幕上一个黑框框上面一串串内容，飞速的运行着，像黑客帝国的代码雨；他们用的也基本上都是linux系统；</p><p>你知道想要在linux系统里 下代码雨有多容易吗？只需要<code>cmatrix</code>就能搞定了！！<br>试试吧！</p><p>学习linux，你可以明白：</p><ol><li>为什么输入<a href="http://www.baidu.com就可以访问网站" target="_blank" rel="noopener">www.baidu.com就可以访问网站</a></li><li>为什么输入baidu.com会跳转到<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></li><li>系统是怎么回事</li><li>黑客们是在做什么</li><li>打造属于自己的炫酷系统</li><li>网站是怎么给我提供服务的</li><li>网站的背后有哪些东西</li><li>搭建属于自己的网站</li><li>。。。<br>当然linux也分为很多的方向：<br>比如linux运维；应用运维，大数据运维，架构师，数据库，白帽子等等等等，但是说了这么多，可是都离不开linux！<br>所以IT这个行业，linux已经算是必须的东西喽！无论是程序猿，网络攻城狮，测试攻城狮懂得linux对你的帮助是非常大的；<br>所以无论是兴趣，找工作，还是想要装X，那么不妨一同进入linux的世界探寻探寻吧！</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前言：&lt;/p&gt;
+&lt;p&gt;​    linux是什么？&lt;br&gt;​    linux能干什么？&lt;br&gt;​    学linux做什么？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="https://25share.com/categories/linux/"/>
+    
+      <category term="基础" scheme="https://25share.com/categories/linux/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="linux" scheme="https://25share.com/tags/linux/"/>
+    
+      <category term="linux基础" scheme="https://25share.com/tags/linux%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在导入python(tab)模块时报错</title>
-    <link href="http://25share.com/2019/09/10/%E5%9C%A8%E5%AF%BC%E5%85%A5python%EF%BC%88tab%EF%BC%89%E6%A8%A1%E5%9D%97%E6%97%B6%E6%8A%A5%E9%94%99.html"/>
-    <id>http://25share.com/2019/09/10/在导入python（tab）模块时报错.html</id>
+    <link href="https://25share.com/2019/09/10/%E5%9C%A8%E5%AF%BC%E5%85%A5python%EF%BC%88tab%EF%BC%89%E6%A8%A1%E5%9D%97%E6%97%B6%E6%8A%A5%E9%94%99.html"/>
+    <id>https://25share.com/2019/09/10/在导入python（tab）模块时报错.html</id>
     <published>2019-09-10T04:40:08.417Z</published>
     <updated>2019-09-10T04:41:20.046Z</updated>
     
@@ -32,17 +60,17 @@
     </summary>
     
     
-      <category term="python" scheme="http://25share.com/categories/python/"/>
+      <category term="python" scheme="https://25share.com/categories/python/"/>
     
     
-      <category term="python" scheme="http://25share.com/tags/python/"/>
+      <category term="python" scheme="https://25share.com/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>vmware安装ubuntu18.10时出现显示不全问题</title>
-    <link href="http://25share.com/2019/09/10/vmware15pro%E5%AE%89%E8%A3%85ubuntu18.10%E6%97%B6%E5%87%BA%E7%8E%B0%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98.html"/>
-    <id>http://25share.com/2019/09/10/vmware15pro安装ubuntu18.10时出现显示不全问题.html</id>
+    <link href="https://25share.com/2019/09/10/vmware15pro%E5%AE%89%E8%A3%85ubuntu18.10%E6%97%B6%E5%87%BA%E7%8E%B0%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98.html"/>
+    <id>https://25share.com/2019/09/10/vmware15pro安装ubuntu18.10时出现显示不全问题.html</id>
     <published>2019-09-10T04:02:41.610Z</published>
     <updated>2019-09-10T05:02:05.115Z</updated>
     
@@ -55,19 +83,19 @@
     </summary>
     
     
-      <category term="tips" scheme="http://25share.com/categories/tips/"/>
+      <category term="tips" scheme="https://25share.com/categories/tips/"/>
     
     
-      <category term="vmware" scheme="http://25share.com/tags/vmware/"/>
+      <category term="linux" scheme="https://25share.com/tags/linux/"/>
     
-      <category term="linux" scheme="http://25share.com/tags/linux/"/>
+      <category term="vmware" scheme="https://25share.com/tags/vmware/"/>
     
   </entry>
   
   <entry>
     <title>win右键菜单添加程序</title>
-    <link href="http://25share.com/2019/09/09/win%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%B7%BB%E5%8A%A0%E7%A8%8B%E5%BA%8F.html"/>
-    <id>http://25share.com/2019/09/09/win右键菜单添加程序.html</id>
+    <link href="https://25share.com/2019/09/09/win%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%B7%BB%E5%8A%A0%E7%A8%8B%E5%BA%8F.html"/>
+    <id>https://25share.com/2019/09/09/win右键菜单添加程序.html</id>
     <published>2019-09-09T11:56:42.938Z</published>
     <updated>2019-09-09T11:57:25.149Z</updated>
     
@@ -80,17 +108,17 @@
     </summary>
     
     
-      <category term="tips" scheme="http://25share.com/categories/tips/"/>
+      <category term="tips" scheme="https://25share.com/categories/tips/"/>
     
     
-      <category term="win" scheme="http://25share.com/tags/win/"/>
+      <category term="win" scheme="https://25share.com/tags/win/"/>
     
   </entry>
   
   <entry>
     <title>阅读书单</title>
-    <link href="http://25share.com/2019/09/09/%E9%98%85%E8%AF%BB%E4%B9%A6%E5%8D%95.html"/>
-    <id>http://25share.com/2019/09/09/阅读书单.html</id>
+    <link href="https://25share.com/2019/09/09/%E9%98%85%E8%AF%BB%E4%B9%A6%E5%8D%95.html"/>
+    <id>https://25share.com/2019/09/09/阅读书单.html</id>
     <published>2019-09-09T05:23:05.966Z</published>
     <updated>2019-09-10T05:08:50.049Z</updated>
     
@@ -103,19 +131,19 @@
     </summary>
     
     
-      <category term="read" scheme="http://25share.com/categories/read/"/>
+      <category term="read" scheme="https://25share.com/categories/read/"/>
     
     
-      <category term="read" scheme="http://25share.com/tags/read/"/>
+      <category term="read" scheme="https://25share.com/tags/read/"/>
     
-      <category term="书单" scheme="http://25share.com/tags/%E4%B9%A6%E5%8D%95/"/>
+      <category term="书单" scheme="https://25share.com/tags/%E4%B9%A6%E5%8D%95/"/>
     
   </entry>
   
   <entry>
     <title>安利好用的工具及软件之（一）</title>
-    <link href="http://25share.com/2019/09/09/%E5%AE%89%E5%88%A9%E5%A5%BD%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%BD%AF%E4%BB%B6%E4%B9%8B%EF%BC%88%E4%B8%80%EF%BC%89.html"/>
-    <id>http://25share.com/2019/09/09/安利好用的工具及软件之（一）.html</id>
+    <link href="https://25share.com/2019/09/09/%E5%AE%89%E5%88%A9%E5%A5%BD%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%BD%AF%E4%BB%B6%E4%B9%8B%EF%BC%88%E4%B8%80%EF%BC%89.html"/>
+    <id>https://25share.com/2019/09/09/安利好用的工具及软件之（一）.html</id>
     <published>2019-09-09T04:19:53.697Z</published>
     <updated>2019-09-09T08:21:50.650Z</updated>
     
@@ -128,17 +156,17 @@
     </summary>
     
     
-      <category term="tips" scheme="http://25share.com/categories/tips/"/>
+      <category term="tips" scheme="https://25share.com/categories/tips/"/>
     
     
-      <category term="软件" scheme="http://25share.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+      <category term="软件" scheme="https://25share.com/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>堡垒机-jumpserver</title>
-    <link href="http://25share.com/2019/09/07/%E5%A0%A1%E5%9E%92%E6%9C%BA-jumpserver.html"/>
-    <id>http://25share.com/2019/09/07/堡垒机-jumpserver.html</id>
+    <link href="https://25share.com/2019/09/07/%E5%A0%A1%E5%9E%92%E6%9C%BA-jumpserver.html"/>
+    <id>https://25share.com/2019/09/07/堡垒机-jumpserver.html</id>
     <published>2019-09-07T13:15:25.811Z</published>
     <updated>2019-09-07T07:11:22.495Z</updated>
     
@@ -151,21 +179,21 @@
     </summary>
     
     
-      <category term="linux" scheme="http://25share.com/categories/linux/"/>
+      <category term="linux" scheme="https://25share.com/categories/linux/"/>
     
-      <category term="server" scheme="http://25share.com/categories/linux/server/"/>
+      <category term="server" scheme="https://25share.com/categories/linux/server/"/>
     
     
-      <category term="linux" scheme="http://25share.com/tags/linux/"/>
+      <category term="linux" scheme="https://25share.com/tags/linux/"/>
     
-      <category term="server" scheme="http://25share.com/tags/server/"/>
+      <category term="server" scheme="https://25share.com/tags/server/"/>
     
   </entry>
   
   <entry>
     <title>个人博客折腾记</title>
-    <link href="http://25share.com/2019/09/07/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%8A%98%E8%85%BE%E8%AE%B0.html"/>
-    <id>http://25share.com/2019/09/07/个人博客折腾记.html</id>
+    <link href="https://25share.com/2019/09/07/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%8A%98%E8%85%BE%E8%AE%B0.html"/>
+    <id>https://25share.com/2019/09/07/个人博客折腾记.html</id>
     <published>2019-09-07T13:15:25.810Z</published>
     <updated>2019-09-07T13:17:21.428Z</updated>
     
@@ -178,17 +206,17 @@
     </summary>
     
     
-      <category term="tips" scheme="http://25share.com/categories/tips/"/>
+      <category term="tips" scheme="https://25share.com/categories/tips/"/>
     
     
-      <category term="hexo" scheme="http://25share.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://25share.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>git+hexo打造属于你的网站</title>
-    <link href="http://25share.com/2019/09/07/git+hexo%E6%89%93%E9%80%A0%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99.html"/>
-    <id>http://25share.com/2019/09/07/git+hexo打造属于你的网站.html</id>
+    <link href="https://25share.com/2019/09/07/git+hexo%E6%89%93%E9%80%A0%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99.html"/>
+    <id>https://25share.com/2019/09/07/git+hexo打造属于你的网站.html</id>
     <published>2019-09-07T13:15:25.807Z</published>
     <updated>2019-09-07T07:08:04.837Z</updated>
     
@@ -202,17 +230,17 @@
     </summary>
     
     
-      <category term="tips" scheme="http://25share.com/categories/tips/"/>
+      <category term="tips" scheme="https://25share.com/categories/tips/"/>
     
     
-      <category term="hexo" scheme="http://25share.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://25share.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>xmind双击文件无法打开及破解大法</title>
-    <link href="http://25share.com/2019/09/02/xmind%E5%8F%8C%E5%87%BB%E6%97%A0%E6%95%88.html"/>
-    <id>http://25share.com/2019/09/02/xmind双击无效.html</id>
+    <link href="https://25share.com/2019/09/02/xmind%E5%8F%8C%E5%87%BB%E6%97%A0%E6%95%88.html"/>
+    <id>https://25share.com/2019/09/02/xmind双击无效.html</id>
     <published>2019-09-02T01:40:29.357Z</published>
     <updated>2019-09-09T11:57:25.149Z</updated>
     
@@ -226,19 +254,19 @@
     </summary>
     
     
-      <category term="tips" scheme="http://25share.com/categories/tips/"/>
+      <category term="tips" scheme="https://25share.com/categories/tips/"/>
     
     
-      <category term="xmind" scheme="http://25share.com/tags/xmind/"/>
+      <category term="xmind" scheme="https://25share.com/tags/xmind/"/>
     
-      <category term="软件" scheme="http://25share.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+      <category term="软件" scheme="https://25share.com/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>在移动硬盘安装系统</title>
-    <link href="http://25share.com/2019/07/28/%E5%9C%A8%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F.html"/>
-    <id>http://25share.com/2019/07/28/在移动硬盘安装系统.html</id>
+    <link href="https://25share.com/2019/07/28/%E5%9C%A8%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F.html"/>
+    <id>https://25share.com/2019/07/28/在移动硬盘安装系统.html</id>
     <published>2019-07-28T02:53:04.946Z</published>
     <updated>2019-09-09T11:57:25.150Z</updated>
     
@@ -251,10 +279,10 @@
     </summary>
     
     
-      <category term="tips" scheme="http://25share.com/categories/tips/"/>
+      <category term="tips" scheme="https://25share.com/categories/tips/"/>
     
     
-      <category term="系统" scheme="http://25share.com/tags/%E7%B3%BB%E7%BB%9F/"/>
+      <category term="系统" scheme="https://25share.com/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
