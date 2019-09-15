@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://25share.com/"/>
-  <updated>2019-09-15T06:19:54.920Z</updated>
+  <updated>2019-09-15T07:46:46.991Z</updated>
   <id>https://25share.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wc统计详解</title>
+    <link href="https://25share.com/2019/09/15/wc%E7%BB%9F%E8%AE%A1%E8%AF%A6%E8%A7%A3.html"/>
+    <id>https://25share.com/2019/09/15/wc统计详解.html</id>
+    <published>2019-09-15T07:44:41.523Z</published>
+    <updated>2019-09-15T07:46:46.991Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>linux当中经常会使用统计功能，当然有多种方法统计，本文详细的说说wc统计命令</p><a id="more"></a><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@backup scripts]# wc --help</span><br><span class="line">用法：wc [选项]... [文件]...</span><br><span class="line">　或：wc [选项]... --files0-from=F</span><br><span class="line">Print newline, word, and byte counts for each FILE, and a total line if</span><br><span class="line">more than one FILE is specified.  With no FILE, or when FILE is -,</span><br><span class="line">read standard input.  A word is a non-zero-length sequence of characters</span><br><span class="line">delimited by white space.</span><br><span class="line">The options below may be used to select which counts are printed, always in</span><br><span class="line">the following order: newline, word, character, byte, maximum line length.</span><br><span class="line">  -c, --bytes            print the byte counts   打印字节数</span><br><span class="line">  -m, --chars            print the character counts 打印字符数</span><br><span class="line">  -l, --lines            print the newline counts   打印行数</span><br><span class="line">      --files0-from=文件从指定文件读取以NUL 终止的名称，如果该文件被</span><br><span class="line">指定为"-"则从标准输入读文件名</span><br><span class="line">  -L, --max-line-length显示最长行的长度</span><br><span class="line">  -w, --words显示单词计数</span><br><span class="line">      --help显示此帮助信息并退出</span><br><span class="line">      --version显示版本信息并退出</span><br></pre></td></tr></table></figure><p>测试文档:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@backup scripts]# cat&gt;1.txt&lt;&lt;EOF</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> I am smart</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> I have a dog</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> we are friends</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ohhhhh enjoy it!!!!</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> EOF</span></span><br><span class="line">[root@backup scripts]# cat 1.txt </span><br><span class="line">I am smart      10</span><br><span class="line">I have a dog    12</span><br><span class="line">we are friends  14</span><br><span class="line">ohhhhh enjoy it!!!! 19</span><br><span class="line">总字数应该为55</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@backup scripts]# wc -c 1.txt   #统计字节数</span><br><span class="line">59 1.txt</span><br><span class="line">[root@backup scripts]# wc -m 1.txt  #统计字符数</span><br><span class="line">59 1.txt</span><br><span class="line">[root@backup scripts]# wc -l 1.txt  #统计行数</span><br><span class="line">4 1.txt</span><br><span class="line">[root@backup scripts]# wc -L 1.txt  #统计最长行数的字数长度</span><br><span class="line">19 1.txt</span><br><span class="line">[root@backup scripts]# wc -w 1.txt  #统计单词数</span><br><span class="line">13 1.txt</span><br></pre></td></tr></table></figure><p>但是实际字数统计的话应该为55，但是可以看到无论<code>-c</code> 还是 <code>-m</code>显示的都是59，这是为什么？</p><p><strong>其实是因为制表符的原因！</strong></p><p><img alt="title" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/15/1568532456955-1568532456983.png"></p><p>所以其实这里可以看出，其实wc -L统计字数应该是最为精准的，但是只适用于 <strong>单行文件</strong> 或者是 <strong>变量</strong>（因为变量赋值一般都是一行）</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;linux当中经常会使用统计功能，当然有多种方法统计，本文详细的说说wc统计命令&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="https://25share.com/categories/linux/"/>
+    
+      <category term="基础" scheme="https://25share.com/categories/linux/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="linux" scheme="https://25share.com/tags/linux/"/>
+    
+      <category term="linux基础" scheme="https://25share.com/tags/linux%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>linux的发展</title>

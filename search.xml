@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[wc统计详解]]></title>
+    <url>%2F2019%2F09%2F15%2Fwc%E7%BB%9F%E8%AE%A1%E8%AF%A6%E8%A7%A3.html</url>
+    <content type="text"><![CDATA[linux当中经常会使用统计功能，当然有多种方法统计，本文详细的说说wc统计命令 123456789101112131415161718[root@backup scripts]# wc --help用法：wc [选项]... [文件]... 或：wc [选项]... --files0-from=FPrint newline, word, and byte counts for each FILE, and a total line ifmore than one FILE is specified. With no FILE, or when FILE is -,read standard input. A word is a non-zero-length sequence of charactersdelimited by white space.The options below may be used to select which counts are printed, always inthe following order: newline, word, character, byte, maximum line length. -c, --bytes print the byte counts 打印字节数 -m, --chars print the character counts 打印字符数 -l, --lines print the newline counts 打印行数 --files0-from=文件 从指定文件读取以NUL 终止的名称，如果该文件被 指定为"-"则从标准输入读文件名 -L, --max-line-length 显示最长行的长度 -w, --words 显示单词计数 --help 显示此帮助信息并退出 --version 显示版本信息并退出 测试文档: 123456789101112[root@backup scripts]# cat&gt;1.txt&lt;&lt;EOF&gt; I am smart&gt; I have a dog&gt; we are friends&gt; ohhhhh enjoy it!!!!&gt; EOF[root@backup scripts]# cat 1.txt I am smart 10I have a dog 12we are friends 14ohhhhh enjoy it!!!! 19总字数应该为55 12345678910[root@backup scripts]# wc -c 1.txt #统计字节数59 1.txt[root@backup scripts]# wc -m 1.txt #统计字符数59 1.txt[root@backup scripts]# wc -l 1.txt #统计行数4 1.txt[root@backup scripts]# wc -L 1.txt #统计最长行数的字数长度19 1.txt[root@backup scripts]# wc -w 1.txt #统计单词数13 1.txt 但是实际字数统计的话应该为55，但是可以看到无论-c 还是 -m显示的都是59，这是为什么？ 其实是因为制表符的原因！ 所以其实这里可以看出，其实wc -L统计字数应该是最为精准的，但是只适用于 单行文件 或者是 变量（因为变量赋值一般都是一行）]]></content>
+      <categories>
+        <category>linux</category>
+        <category>基础</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>linux基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux的发展]]></title>
     <url>%2F2019%2F09%2F11%2F2.linux%E7%9A%84%E5%8F%91%E5%B1%95.html</url>
     <content type="text"><![CDATA[linux的发展十分迅捷 版本发展的时间线 从这个图上可以看出linux有多受人们喜爱以及发展的非常迅速 而我们往后的分享中呢，主要以Red Hat系列为主RedHat这个系列下面有主要的3个版本： 红帽企业版：RHEL，收费的 Fedora 社区版，免费，相当于测试版，有新的功能特性会优先加入fedora这个 系统中，让大家尝鲜、测试，约相当于小白鼠吧 CentOS 社区版，免费；之前有这么一群人，看不惯RHEL收费，而且费用很高，所以就把RHEL里有版权信息的东西都去掉以后重新打包在发布出来，但是这个社区由于各种考虑已经被红帽公司收购了，所以现在也是红帽公司旗下的产品，但依旧是免费 这三者都是红帽公司的系统，所以本质上来说，这3个系统并没有什么区别，也就是说，你学习其中一个系统，对于其他2个系统来说都是完全通用的；现在企业中用的较多的就是RHEL和CentOS，而由于RHEL是收费的，所以大部分互联网企业选择了CentOS；当然也有企业在使用别的操作系统的 由于红帽公司有一个比较权威的linux认证，所以我们这里选用贴近认证的红帽系列，主要是CentOS7版本为主，顺带会说说未来的新版本RHEL8.0，在2020年5月就会将8.0用作考试了 但是其实linux其原理都一样，所以当你学会了红帽系列的linux系统时，其实对别的系列的系统，例如Ubuntu系统也能很快的上手]]></content>
