@@ -57,18 +57,18 @@
   };
 </script>
 
-  <meta name="description" content="打造一个编写的随身携带的移动系统">
-<meta name="keywords" content="系统">
+  <meta name="description" content="打造一个便携的随身携带的移动系统">
+<meta name="keywords" content="win">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在移动硬盘安装系统">
 <meta property="og:url" content="https://25share.com/2019/07/28/在移动硬盘安装系统.html">
 <meta property="og:site_name" content="25℃ Share Time">
-<meta property="og:description" content="打造一个编写的随身携带的移动系统">
+<meta property="og:description" content="打造一个便携的随身携带的移动系统">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-15T06:20:21.631Z">
+<meta property="og:updated_time" content="2019-09-16T06:57:46.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在移动硬盘安装系统">
-<meta name="twitter:description" content="打造一个编写的随身携带的移动系统">
+<meta name="twitter:description" content="打造一个便携的随身携带的移动系统">
   <link rel="canonical" href="https://25share.com/2019/07/28/在移动硬盘安装系统">
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tag"></i> <br>标签<span class="badge">12</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tag"></i> <br>标签<span class="badge">11</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -349,7 +349,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-15 14:20:21" itemprop="dateModified" datetime="2019-09-15T14:20:21+08:00">2019-09-15</time>
+                <time title="修改时间：2019-09-16 14:57:46" itemprop="dateModified" datetime="2019-09-16T14:57:46+08:00">2019-09-16</time>
               </span>
             
           
@@ -400,27 +400,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>打造一个编写的随身携带的移动系统</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>打造一个便携的随身携带的移动系统</p>
 <a id="more"></a>
 
-<p>准备工具  </p>
+<p>[TOC]</p>
+<h1 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a><del>方法一：</del></h1><p>准备工具</p>
 <p>1、电脑（已经安装了Windows 7\8\10操作系统）一台</p>
 <p>2、一个以上的移动硬盘</p>
 <p>3、Windows 7\windows8\windows10 光盘或者镜像文件,只需要其中一个</p>
 <p>4、imagex 微软的镜像部署工具</p>
 <p>首先，我们把移动硬盘接到电脑上。</p>
 <p>选择“磁盘管理”</p>
-<p><strong>注：不要选错硬盘，注意看硬盘容量大小和分区</strong></p>
-<p>将要安装系统的硬盘分区分主分区。建立好以后，接下来把新建的分区激活。选择刚刚建立好的分区，点击鼠标右键，选择“将分区标记为活动分区”</p>
+<p>注：不要选错硬盘，注意看硬盘容量大小和分区</p>
+<p>在系统自带的磁盘管理里将要安装系统的硬盘分出一个用来装系统的区，分为主分区。<del>建立好以后，接下来把新建的分区激活。选择刚刚建立好的分区，点击鼠标右键，选择“将分区标记为活动分区”</del><br><img alt="建立分区" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/16/1568611225309-1568611225347.png"><br><del>这里用的是分区软件，软件的使用大致上都差不多<br>如果这时候你的盘不能读写，显示的是这个样子，双击无法打开</del><br><img alt="无容量大小" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/16/1568612506917-1568612506918.png"></p>
+<p><del>右键属性，可用空间，已用空间都为0</del><br><img alt="属性为0" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/16/1568612648859-1568612648861.png"></p>
+<p><del>那么就用系统自带的磁盘管理右键要操作的磁盘来删除卷，然后重新建立卷，格式化一下就会正常了</del><br><img alt="删除卷" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/16/1568612731888-1568612731892.png"></p>
 <p>打开 Win10 光盘或者镜像，找到光盘目录下的“sources”目录，点击进入目录；找到“install.wim”文件，此文件为 Win10 的安装镜像文件</p>
 <p>以管理员身份运行“命令提示符”</p>
 <p>进入盘符</p>
-<p>输入命令“imagex.exe /apply install.wim 1 h:\”，</p>
-<p>已经把Win10的安装文件写到硬盘上，但是还不能引导启动。所以我们还需要向移动硬盘上写入系统启动文件。</p>
-<p>在命令提示符下输入“bcdboot h:\windows /s h:”，然后回车</p>
+<p>输入命令“imagex.exe /apply install.wim 1 i:\”，</p>
+<p>这里的<code>i:</code>是指移动硬盘的盘符，根据自己的情况来写<br>如果提示：<code>不是内部或外部命令，也不是可运行的程序</code> 就把<code>imagex.exe</code>的全路径写上<br>例如，我下载的<code>imagex.exe</code>这个文件是在<code>E:\文档\Compressed\imagex_downcc\imagex\</code>这个里面</p>
+<p>就可以将这整条写成：<br><code>E:\文档\Compressed\imagex_downcc\imagex\imagex.exe /apply install.wim 1 i:\</code></p>
+<p>看见<strong>Successfully</strong>就是成功了</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[ <span class="number">100</span>% ] Applying progress</span><br><span class="line"></span><br><span class="line">Successfully applied image.</span><br></pre></td></tr></table></figure>
+
+<p>这时已经把Win10的安装文件写到硬盘上，但是还不能引导启动。所以我们还需要向移动硬盘上写入系统启动文件。</p>
+<p>在命令提示符下输入“bcdboot <font color="red">i</font>:\windows /s <font color="red">i</font>:”，然后回车<br>同样要注意这里的盘符</p>
+<p>此时你的移动硬盘上就有内容了<br><img alt="移动硬盘里的内容" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/16/1568613248723-1568613248725.png"></p>
 <p>在其他电脑上运行移动硬盘上的系统</p>
 <p>第一次运行会安装部署系统，期间傻瓜式操作，按照提示操作即可</p>
 <p>第二次就可以正常使用了</p>
+<p><strong>这里遇到了unknown filesystem的错误</strong></p>
+<p><strong>总结:</strong><br>这里的应该是要再单独分一个活动分区出来100MB或450MB的那种隐藏活动分区，用来存放启动必需的文件<br>因为如果是全部标识为活动分区就无法用命令<code>E:\文档\Compressed\imagex_downcc\imagex\imagex.exe /apply install.wim 1 i:\</code>拷贝文件了</p>
+<h1 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h1><p>WinToUSB<br>最佳 Windows To Go 创建器帮助创建移动 Windows 10/8/7！<br>使用说明官方文档：<br><a href="https://www.easyuefi.com/wintousb/faq/zh-CN/How-to-use-WinToUSB-ISO-To-USB.html" target="_blank" rel="noopener">https://www.easyuefi.com/wintousb/faq/zh-CN/How-to-use-WinToUSB-ISO-To-USB.html</a></p>
+<p>注：免费版不支持专业版，企业版等的安装</p>
+<p>如果出现错误（API无法调用）之类不明显的，请确认权限；</p>
+<p>软件用管理员权限运行</p>
+<p>安全类软件（360，金山，防火墙之类的安防）看看是不是有拦截，最好都关闭再来操作</p>
+<p><img alt="正在安装" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/16/1568615874666-1568615874668.png"></p>
+<p>等待进度满了，可能有些慢，耐心等待会儿就好；看待100%以及安装成功字样就已经完成了，接下去就是进BIOS修改移动硬盘启动，然后初始化安装配置一下就可以了</p>
+<p>打开我的电脑可以看出，这里软件自动分了2个区<br><img alt="使用软件自动创建的分区" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/16/1568615926302-1568615926304.png"></p>
+<p>打开磁盘管理工具，可以看出一个是100M的活动分区，一个就是用来装系统的主分区<br><img alt="分区格式" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/notebook/2019/09/16/1568616045723-1568616045724.png"></p>
+<p>所以软件在使用的时候，要注意好数据的备份，以及磁盘的选择，还有分区的选择，如果提前不做分区的话，容易全盘被格式化</p>
+<p><strong>总结：</strong><br>所以如果只是想将移动硬盘的一部分来安装系统的话，建议就提前在磁盘管理界面分好区</p>
+<ul>
+<li>一个100M的隐藏活动分区，</li>
+<li>一个用来装系统的分区</li>
+<li>其余的就看你自己想要怎么分了<br>然后安装的时候就细心点选盘和盘符</li>
+</ul>
 
     </div>
 
@@ -437,6 +464,16 @@
   
 </div>
       
+  <div class="popular-posts-header">相关文章推荐</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2019\09\09\win右键菜单添加程序.html" rel="bookmark">win右键菜单添加程序</a></div>
+      
+    </li>
+  
+  </ul>
 
         
       
@@ -486,7 +523,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/系统/" rel="tag"><i class="fa fa-flag"></i> 系统</a>
+              <a href="/tags/win/" rel="tag"><i class="fa fa-flag"></i> win</a>
             
           </div>
         
@@ -556,6 +593,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#方法一："><span class="nav-text">方法一：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法二："><span class="nav-text">方法二：</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
@@ -598,7 +637,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
