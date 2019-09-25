@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[更换电脑后如何继续用hexo写博客]]></title>
+    <url>%2F2019%2F09%2F25%2F%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E7%BB%A7%E7%BB%AD%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2.html</url>
+    <content type="text"><![CDATA[如何在更换电脑后如何继续用hexo写博客 1.安装必要的软件 git node.js软件按照正常安装即可 2. blog源目录拷贝一种是将旧电脑中的blog目录拷贝；另一种就是github上直接下载 3. hexo安装hexo在CMD中输入安装指令，可以使用-g全局安装 1npm install hexo-cli -g 然后进入blog目录,按住shift点击在此处打开命令行终端 1npm install 4. 生成新的ssh-key1ssh-keygen -t rsa -C &quot;your_email@example.com&quot; 一般默认一路回车就好 进入ssh密钥生成目录，一般在命令结束后会有提示保存位置，一般是在C:\Users\用户名.ssh，然后打开id_rsa.pub文件，复制里面所有的内容，然后进入 github 页面，点击右上角的 头像 &gt; Settings ，在左侧找到SSH and GPG keys。 点击New SSH key ，Title 里的内容可以自定义，Key 里填入复制的内容。点击 add key。 返回窗口，输入： 123ssh -T git@github.com若弹出Are you sure you want to continue connecting (yes/no)? 时输入 yes 确认。接着出现 Hi xxx! You&apos;ve successfully authenticated, but GitHub does not provide shell access. 则操作成功。 然后可以用命令测试是否成功 1234hexo clean // 清除缓存 网页正常情况下可以忽略此条命令hexo g // 生成静态网页hexo s // 启动服务器hexo d //推送到git上]]></content>
+      <categories>
+        <category>tips</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[win10没有右键新建文本文件解决方法]]></title>
+    <url>%2F2019%2F09%2F25%2Fwin10%E6%B2%A1%E6%9C%89%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <content type="text"><![CDATA[win10使用右键新建文本文件的时候，突然发现没有这个选项 这个问题的解决方式 打开记事本软件，新建一个文本，复制上以上内容： 123456789101112131415161718192021Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\.txt]@=&quot;txtfile&quot;&quot;Content Type&quot;=&quot;text/plain&quot;[HKEY_CLASSES_ROOT\.txt\ShellNew]&quot;NullFile&quot;=&quot;&quot; [HKEY_CLASSES_ROOT\txtfile]@=&quot;文本文档&quot;[HKEY_CLASSES_ROOT\txtfile\shell][HKEY_CLASSES_ROOT\txtfile\shell\open][HKEY_CLASSES_ROOT\txtfile\shell\open\command]@=&quot;NOTEPAD.EXE %1&quot; 然后存为 txt.reg 文件名字任意，但是后缀必须是reg注册表文件 然后双击导入txt.reg 如果立即查看还是右键没有新建文本文件，那么过会儿再去看就会有了]]></content>
+      <categories>
+        <category>tips</category>
+      </categories>
+      <tags>
+        <tag>win</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[安利好用的工具及软件之（二）]]></title>
     <url>%2F2019%2F09%2F22%2F%E5%AE%89%E5%88%A9%E5%A5%BD%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%BD%AF%E4%BB%B6%E4%B9%8B%EF%BC%88%E4%BA%8C%EF%BC%89.html</url>
     <content type="text"><![CDATA[这篇主要介绍一些比较好用的小工具 在此电脑中添加常用小工具以及左侧也添加主要的工具：ThisPCTweaker 在左侧导航栏添加几个自定义的文件夹在此电脑上面的文件夹添加自定义的文件夹 默认有视频，图片，音乐，下载等几个常规的6个文件夹 用ThisPCTweaker这款小工具就能达到各种自定义的目的软件非常小，只有245K，以及支持简体中文 在软件左下有2个复选框，可以选择让自定义的文件夹显示在左侧导航栏还是在此电脑上面文件夹里 字体编辑软件主要的工具： FontCreator 这款工具可以实现修改字体，以及修改字体属性等内容，DIY出属于自己的字体出来，但建议如果想要发布字体要注意下版权呦 这款软件高版本已经集成了TTC字体的解包了 字体解包及打包主要的工具：TTCtools这个包里主要就2个软件，一个解包：AllUniteTTC.exe一个打包：UniteTTC 这款软件主要用于TTC字体的解包和打包使用也非常方便，不需要打开软件，只需要将需要操作的TTC往软件上拖放即可，软件会自动进行操作 GIF录制工具主要的工具：GifCam 这款软件也十分精简强悍 用它选择好区域点击录制，出来的就是GIF图啦！ 你看，这样子很棒吧 这样就无需繁琐的编辑啦 当然高度自由的编辑制作GIF的软件也还有很多其他的，想Photoshop制作的也非常棒哦，只不过略显繁琐，需要一帧一帧的去调整 sandbox主要的工具：sandbox sandbox中文译名“沙盘”， 顾名思义可以看做是一种容器，里面所做的一切都可以推倒重来，军事上常用沙盘来进行一些战争区域的地形模拟这是电脑上用沙盘，里面所做的一切都可以推倒重来 可以用来运行一些测试或安全性未知的软件 sandbox就是一款独立的沙盘软件 如果你有些临时的安全性未知的软件，或代码想要运行，不妨试试它。较虚拟机而言非常的小巧轻便，使用也非常方便右键软件运行在sandbox即可！ 比出电脑中重复的内容主要的工具：Beyond Compare 这款软件看名字就可以看出，是一款智能比较的工具**Beyond Compare非常灵活，可以本地或者远程连接虚拟文件系统，并以直观的方式连接到您的数据** 比较文件,文件夹 可以高效对比整个驱动器和文件夹，检查大小和修改时间；或者逐字节完整验证每个文件；无缝集成了FTP站点、云存储和压缩文件，强大的过滤功能允许您只看到的自己感兴趣的。Beyond Compare选择好的方法来突出不同之处，文本文件可以用语法高亮和比较规则调整进行查看和编辑，以用于文档、源代码和HTML。Word文档、Adobe和pdf文件也可以进行比较但是不能编辑。数据文件、可执行和二进制文件以及图像文件都有专用的查看器。 合并文件,文件夹 三方合并 Beyond Compare的合并浏览器支持将一个文件或文件夹的两个不同版本进行变更合并，生成一个输出。这种智能的方式允许在仔细检查冲突的时候能快速接受大部分变更。颜色编码和部分高亮显示允许您简单、快速地接受、拒绝以及合并变更。文件合并时可以使用内置的语法高亮显示编辑器改变输出文件的任意行。大部分版本控制系统都可直接使用Beyond Compare，当需要时它能提供给您强大的对比和合并支持。 同步文件夹 Beyond Compare文件夹同步界面可以自动协调数据差异；有效地更新您的电脑，备份您的计算机或管理你的网站；可以使用相同的接口从磁盘、FTP服务器和压缩文件拷内容。可以很容易地过滤掉您不需要的内容，并且可以使用所有强大的比较技术，让备份又快又准。可以使用一个灵活的脚本语言自动执行重复性任务，且可以从命令行调用任何脚本，以使您在方便的时候安排同步。 所以不妨用此工具找出电脑中重复的文件或文件夹吧]]></content>

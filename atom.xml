@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://25share.com/"/>
-  <updated>2019-09-22T10:59:31.153Z</updated>
+  <updated>2019-09-25T11:44:17.040Z</updated>
   <id>https://25share.com/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>更换电脑后如何继续用hexo写博客</title>
+    <link href="https://25share.com/2019/09/25/%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E7%BB%A7%E7%BB%AD%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2.html"/>
+    <id>https://25share.com/2019/09/25/换电脑后如何继续用hexo写博客.html</id>
+    <published>2019-09-25T11:43:33.847Z</published>
+    <updated>2019-09-25T11:44:17.040Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>如何在更换电脑后如何继续用hexo写博客</p><a id="more"></a><h1 id="1-安装必要的软件"><a href="#1-安装必要的软件" class="headerlink" title="1.安装必要的软件"></a>1.安装必要的软件</h1><ul><li>git</li><li>node.js<br>软件按照正常安装即可</li></ul><h1 id="2-blog源目录拷贝"><a href="#2-blog源目录拷贝" class="headerlink" title="2. blog源目录拷贝"></a>2. blog源目录拷贝</h1><p>一种是将旧电脑中的blog目录拷贝；<br>另一种就是github上直接下载</p><h1 id="3-hexo"><a href="#3-hexo" class="headerlink" title="3. hexo"></a>3. hexo</h1><p>安装hexo<br>在CMD中输入安装指令，可以使用<code>-g</code>全局安装</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><p>然后进入blog目录,按住shift点击在此处打开命令行终端</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><h1 id="4-生成新的ssh-key"><a href="#4-生成新的ssh-key" class="headerlink" title="4. 生成新的ssh-key"></a>4. 生成新的ssh-key</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>一般默认一路回车就好</p><p>进入ssh密钥生成目录，一般在命令结束后会有提示保存位置，一般是在C:\Users\用户名.ssh，然后打开id_rsa.pub文件，复制里面所有的内容，<br>然后进入 github 页面，点击右上角的 头像 &gt; Settings ，在左侧找到SSH and GPG keys。</p><p>点击New SSH key ，Title 里的内容可以自定义，Key 里填入复制的内容。点击 add key。</p><p>返回窗口，输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line">若弹出Are you sure you want to continue connecting (yes/no)? 时输入 yes 确认。</span><br><span class="line">接着出现 Hi xxx! You&apos;ve successfully authenticated, but GitHub does not provide shell access. 则操作成功。</span><br></pre></td></tr></table></figure><p>然后可以用命令测试是否成功</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean // 清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line">hexo g // 生成静态网页</span><br><span class="line">hexo s // 启动服务器</span><br><span class="line">hexo d //推送到git上</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何在更换电脑后如何继续用hexo写博客&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="tips" scheme="https://25share.com/categories/tips/"/>
+    
+    
+      <category term="hexo" scheme="https://25share.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10没有右键新建文本文件解决方法</title>
+    <link href="https://25share.com/2019/09/25/win10%E6%B2%A1%E6%9C%89%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html"/>
+    <id>https://25share.com/2019/09/25/win10没有右键新建文本文件解决方法.html</id>
+    <published>2019-09-25T11:00:23.229Z</published>
+    <updated>2019-09-25T11:38:51.647Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>win10使用右键新建文本文件的时候，突然发现没有这个选项</p><p>这个问题的解决方式</p><a id="more"></a><p>打开记事本软件，新建一个文本，复制上以上内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\.txt]</span><br><span class="line"></span><br><span class="line">@=&quot;txtfile&quot;</span><br><span class="line"></span><br><span class="line">&quot;Content Type&quot;=&quot;text/plain&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\.txt\ShellNew]</span><br><span class="line"></span><br><span class="line">&quot;NullFile&quot;=&quot;&quot; [HKEY_CLASSES_ROOT\txtfile]</span><br><span class="line"></span><br><span class="line">@=&quot;文本文档&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\txtfile\shell]</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\txtfile\shell\open]</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\txtfile\shell\open\command]</span><br><span class="line"></span><br><span class="line">@=&quot;NOTEPAD.EXE %1&quot;</span><br></pre></td></tr></table></figure><p>然后存为 <code>txt.reg</code></p><blockquote><p>文件名字任意，但是后缀必须是reg注册表文件</p></blockquote><p>然后双击导入<code>txt.reg</code></p><p>如果立即查看还是右键没有新建文本文件，那么过会儿再去看就会有了</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;win10使用右键新建文本文件的时候，突然发现没有这个选项&lt;/p&gt;
+&lt;p&gt;这个问题的解决方式&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="tips" scheme="https://25share.com/categories/tips/"/>
+    
+    
+      <category term="win" scheme="https://25share.com/tags/win/"/>
+    
+  </entry>
   
   <entry>
     <title>安利好用的工具及软件之（二）</title>
