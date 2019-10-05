@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/32x32.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32x32.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16x16.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/32x32.png?v=7.4.0" color="#222">
+  <link rel="alternate" href="/atom.xml" title="25℃ Share Time" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":true},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="官方网站http://jumpserver.org">
+<meta name="keywords" content="linux,server">
+<meta property="og:type" content="article">
+<meta property="og:title" content="堡垒机-jumpserver">
+<meta property="og:url" content="https://25share.com/28943.html">
+<meta property="og:site_name" content="25℃ Share Time">
+<meta property="og:description" content="官方网站http://jumpserver.org">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-15T06:20:04.113Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="堡垒机-jumpserver">
+<meta name="twitter:description" content="官方网站http://jumpserver.org">
+  <link rel="canonical" href="https://25share.com/28943">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>堡垒机-jumpserver | 25℃ Share Time</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">25℃ Share Time</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">记录linux,python,自动化，阅读，小技巧</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-linux">
+      
+    
+      
+    
+
+    <a href="/categories/linux/" rel="section"><i class="menu-item-icon fa fa-fw fa-linux"></i> <br>linux</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-python">
+      
+    
+      
+    
+
+    <a href="/categories/python/" rel="section"><i class="menu-item-icon fa fa-fw fa-code"></i> <br>python</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-read">
+      
+    
+      
+    
+
+    <a href="/categories/read/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>阅读</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tips">
+      
+    
+      
+    
+
+    <a href="/categories/tips/" rel="section"><i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>小技巧</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">18</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tag"></i> <br>标签<span class="badge">15</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://25share.com/28943.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="25℃">
+      <meta itemprop="description" content="linux|python|自动化|阅读|美剧|日剧|宅女">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="25℃ Share Time">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">堡垒机-jumpserver
+
+          
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-07 21:15:25" itemprop="dateCreated datePublished" datetime="2019-09-07T21:15:25+08:00">2019-09-07</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-15 14:20:04" itemprop="dateModified" datetime="2019-09-15T14:20:04+08:00">2019-09-15</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/server/" itemprop="url" rel="index"><span itemprop="name">server</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span id="/28943.html" class="post-meta-item leancloud_visitors" data-flag-title="堡垒机-jumpserver" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/28943.html#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/28943.html" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h2><p><a href="http://jumpserver.org" target="_blank" rel="noopener">http://jumpserver.org</a></p>
+<a id="more"></a>
+
+<h2 id="Jumpserver-软件包环境要求："><a href="#Jumpserver-软件包环境要求：" class="headerlink" title="Jumpserver 软件包环境要求："></a>Jumpserver 软件包环境要求：</h2><p>Python = 3.6.x<br>Mysql Server ≥ 5.6<br>Mariadb Server ≥ 5.5.56<br>Redis</p>
+<p>** 生产环境部署建议部署 1.4.8 版本 **</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p><strong>jumpserver服务端：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver ~]# cat /etc/redhat-release </span><br><span class="line">CentOS Linux release 7.4.1708 (Core) </span><br><span class="line"></span><br><span class="line">[root@jumpserver ~]# uname -r</span><br><span class="line">3.10.0-693.el7.x86_64</span><br><span class="line"></span><br><span class="line">[root@jumpserver ~]# uname -n</span><br><span class="line">jumpserver</span><br><span class="line"></span><br><span class="line">[root@jumpserver ~]# uname -m</span><br><span class="line">x86_64</span><br><span class="line"></span><br><span class="line">[root@jumpserver ~]# ifconfig ens33 | grep &quot;inet &quot;|awk &apos;&#123;print $2&#125;&apos;</span><br><span class="line">10.0.0.161</span><br></pre></td></tr></table></figure>
+
+<p><strong>jumpserver被管理端：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver-client ~]# cat /etc/redhat-release </span><br><span class="line">CentOS Linux release 7.4.1708 (Core) </span><br><span class="line"></span><br><span class="line">[root@jumpserver-client ~]# uname -r</span><br><span class="line">3.10.0-693.el7.x86_64</span><br><span class="line"></span><br><span class="line">[root@jumpserver-client ~]# uname -n</span><br><span class="line">jumpserver-client</span><br><span class="line"></span><br><span class="line">[root@jumpserver-client ~]# uname -m</span><br><span class="line">x86_64</span><br><span class="line"></span><br><span class="line">[root@jumpserver-client ~]# ifconfig ens33 | grep &quot;inet &quot; | awk &apos;&#123; print $2&#125;&apos;</span><br><span class="line">10.0.0.162</span><br></pre></td></tr></table></figure>
+
+<p>准备所需软件：</p>
+<p>jumpserver： <a href="https://github.com/jumpserver/jumpserver" target="_blank" rel="noopener">https://github.com/jumpserver/jumpserver</a></p>
+<p>luna： <a href="https://demo.jumpserver.org/download/luna" target="_blank" rel="noopener">https://demo.jumpserver.org/download/luna</a></p>
+<p>coco： <a href="https://github.com/jumpserver/coco" target="_blank" rel="noopener">https://github.com/jumpserver/coco</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**在线下载代码方式： **</span><br><span class="line">git clone https://github.com/jumpserver/coco.git &amp;&amp; cd coco &amp;&amp; git</span><br></pre></td></tr></table></figure>
+
+<p>python： wget <a href="https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz</a></p>
+<h2 id="手动本地jumpserver-服务端搭建"><a href="#手动本地jumpserver-服务端搭建" class="headerlink" title="手动本地jumpserver-服务端搭建"></a>手动本地jumpserver-服务端搭建</h2><h3 id="初始化一些系统环境设置："><a href="#初始化一些系统环境设置：" class="headerlink" title="初始化一些系统环境设置："></a>初始化一些系统环境设置：</h3><h4 id="1-创建软件包放置目录："><a href="#1-创建软件包放置目录：" class="headerlink" title="1. 创建软件包放置目录："></a>1. 创建软件包放置目录：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver ~]# mkdir /server/sources -p</span><br></pre></td></tr></table></figure>
+
+<p>将所需软件全部放在/server/sources/ 目录里</p>
+<p>软件包打包下载：</p>
+<p>链接：<a href="https://pan.baidu.com/s/1ZJzXrLnsXqsqIMkLjKbrIw" target="_blank" rel="noopener">https://pan.baidu.com/s/1ZJzXrLnsXqsqIMkLjKbrIw</a><br>提取码：be45<br>复制这段内容后打开百度网盘手机App，操作更方便哦</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver ~]# cd /server/sources/</span><br><span class="line">[root@jumpserver sources]# ls</span><br><span class="line">coco        luna.tar.gz   Python-3.6.1.tar.xz</span><br><span class="line">jumpserver  python-package</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-关闭防火墙"><a href="#2-关闭防火墙" class="headerlink" title="2. 关闭防火墙"></a>2. 关闭防火墙</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver sources]# systemctl stop firewalld</span><br><span class="line">[root@jumpserver sources]# systemctl disable firewalld </span><br><span class="line">[root@jumpserver sources]# systemctl status firewalld </span><br><span class="line">● firewalld.service - firewalld - dynamic firewall daemon</span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/firewalld.service; disabled; vendor preset: enabled)</span><br><span class="line">   Active: inactive (dead)</span><br><span class="line">     Docs: man:firewalld(1)</span><br><span class="line">[root@jumpserver sources]# systemctl status firewalld </span><br><span class="line">● firewalld.service - firewalld - dynamic firewall daemon</span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/firewalld.service; disabled; vendor preset: enabled)</span><br><span class="line">   Active: inactive (dead)</span><br><span class="line">     Docs: man:firewalld(1)</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-关闭selinux"><a href="#3-关闭selinux" class="headerlink" title="3. 关闭selinux"></a>3. 关闭selinux</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver sources]# setenforce 0</span><br><span class="line">[root@jumpserver sources]# getenforce</span><br><span class="line">只要显示Permissive或者Disabled就是成功</span><br><span class="line"></span><br><span class="line">将/etc/selinux/config配置文件里的SELINUX=enforcing改为SELINUX=disabled</span><br><span class="line">使其永久生效</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-如果生产环境需要开启selinux和防火墙的情况下则使用-直接复制整段进命令行运行即可-："><a href="#4-如果生产环境需要开启selinux和防火墙的情况下则使用-直接复制整段进命令行运行即可-：" class="headerlink" title="4. 如果生产环境需要开启selinux和防火墙的情况下则使用(直接复制整段进命令行运行即可)："></a>4. <strong>如果生产环境需要开启selinux和防火墙的情况下则使用(直接复制整段进命令行运行即可)：</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo -e &quot;\033[31m 1. 防火墙 Selinux 设置 \033[0m&quot; \</span><br><span class="line">&amp;&amp; if [ &quot;$(systemctl status firewalld | grep running)&quot; != &quot;&quot; ]; then firewall-cmd --zone=public --add-port=80/tcp --permanent; firewall-cmd --zone=public --add-port=2222/tcp --permanent; firewall-cmd --permanent --add-rich-rule=&quot;rule family=&quot;ipv4&quot; source address=&quot;172.17.0.0/16&quot; port protocol=&quot;tcp&quot; port=&quot;8080&quot; accept&quot;; firewall-cmd --reload; fi \</span><br><span class="line">&amp;&amp; if [ &quot;$(getenforce)&quot; != &quot;Disabled&quot; ]; then setsebool -P httpd_can_network_connect 1; fi</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-配置中文环境（整段复制到命令行运行即可）："><a href="#5-配置中文环境（整段复制到命令行运行即可）：" class="headerlink" title="5. 配置中文环境（整段复制到命令行运行即可）："></a>5. 配置中文环境（整段复制到命令行运行即可）：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \</span><br><span class="line">&amp;&amp; yum -y install kde-l10n-Chinese \</span><br><span class="line">&amp;&amp; localedef -c -f UTF-8 -i zh_CN zh_CN.UTF-8 \</span><br><span class="line">&amp;&amp; export LC_ALL=zh_CN.UTF-8 \</span><br><span class="line">&amp;&amp; echo &apos;LANG=&quot;zh_CN.UTF-8&quot;&apos; &gt; /etc/locale.conf</span><br></pre></td></tr></table></figure>
+
+<p>重新登录命令行终端即可生效</p>
+<h3 id="安装相关软件"><a href="#安装相关软件" class="headerlink" title="安装相关软件"></a>安装相关软件</h3><h4 id="依赖软件"><a href="#依赖软件" class="headerlink" title="依赖软件"></a>依赖软件</h4><p>所需依赖软件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">wget #下载；</span><br><span class="line"></span><br><span class="line">epel-release #扩展源；</span><br><span class="line"></span><br><span class="line">sqlite-devel #数据库；</span><br><span class="line"></span><br><span class="line">xz #解压；</span><br><span class="line"></span><br><span class="line">gcc #编译器；</span><br><span class="line"></span><br><span class="line">automake #编译相关；</span><br><span class="line"></span><br><span class="line">zlib-devel #压缩；</span><br><span class="line"></span><br><span class="line">openssl-devel #加密；</span><br><span class="line"></span><br><span class="line">git #git相关</span><br><span class="line">[root@jumpserver ~]# yum -y install wget epel-release sqlite-devel xz gcc automake zlib-devel openssl-devel epel-release git</span><br></pre></td></tr></table></figure>
+
+<h4 id="编译安装python3-6-1"><a href="#编译安装python3-6-1" class="headerlink" title="编译安装python3.6.1"></a>编译安装python3.6.1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver ~]# cd /server/sources/</span><br><span class="line">[root@jumpserver sources]# ls</span><br><span class="line">coco        luna.tar.gz          python-package</span><br><span class="line">jumpserver  Python-3.6.1.tar.xz</span><br><span class="line">[root@jumpserver sources]# ./configure  &amp;&amp;  make  &amp;&amp; make install </span><br><span class="line"></span><br><span class="line">[root@jumpserver ~]# cd /server/sources/</span><br><span class="line"></span><br><span class="line">[root@jumpserver sources]# tar xf Python-3.6.1.tar.xz</span><br><span class="line"></span><br><span class="line">[root@jumpserver sources]# cd Python-3.6.1</span><br><span class="line"></span><br><span class="line">[root@jumpserver sources]# ./configure  &amp;&amp;  make  -j 4 &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用-Python-虚拟环境（使多版本的python互不影响，共存）"><a href="#使用-Python-虚拟环境（使多版本的python互不影响，共存）" class="headerlink" title="使用 Python 虚拟环境（使多版本的python互不影响，共存）"></a><strong>使用 Python 虚拟环境（使多版本的python互不影响，共存）</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver Python-3.6.1]# cd /opt/  </span><br><span class="line">[root@jumpserver opt]# python3 -m venv py3   #在opt目录下创建一个py3的虚拟环境</span><br><span class="line">[root@jumpserver opt]# source /opt/py3/bin/</span><br><span class="line">activate          easy_install-3.6  python</span><br><span class="line">activate.csh      pip               python3</span><br><span class="line">activate.fish     pip3              </span><br><span class="line">easy_install      pip3.6            </span><br><span class="line">[root@jumpserver opt]# source /opt/py3/bin/activate</span><br><span class="line">(py3) [root@jumpserver opt]#    #切换成功的，前面有一个(py3)标识</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装-Jumpserver"><a href="#安装-Jumpserver" class="headerlink" title="安装 Jumpserver"></a>安装 Jumpserver</h4><p>这里用的版本是 Jumpserver 1.0.0</p>
+<p><strong>重新打开一个10.0.0.161的shell连接窗口（注意前面没有py3所以不是在python3的虚拟环境下运行）</strong></p>
+<p>①. 安装rpm依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver ~]# cd /server/sources/jumpserver/requirements</span><br><span class="line"></span><br><span class="line">[root@jumpserver requirements]# cat rpm_requirements.txt </span><br><span class="line">libtiff-devel libjpeg-devel libzip-devel freetype-devel lcms2-devel libwebp-devel tcl-devel tk-devel sshpass openldap-devel mysql-devel libffi-devel openssh-clients</span><br><span class="line"></span><br><span class="line">[root@jumpserver requirements]# yum install -y `cat rpm_requirements.txt`</span><br></pre></td></tr></table></figure>
+
+<p>②. 安装 Python 库依赖</p>
+<p>在之前的 (py3) [root@jumpserver ~]# 窗口下进行</p>
+<p>确保是这样的提示状态：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(py3) [root@jumpserver ~]#</span><br></pre></td></tr></table></figure>
+
+<p>如果不是请运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> [root@jumpserver ~]# source /opt/py3/bin/activate</span><br><span class="line"></span><br><span class="line"> (py3) [root@jumpserver ~]#    #进入py3虚拟环境</span><br><span class="line">(py3) [root@jumpserver ~]# pip -V</span><br><span class="line">pip 9.0.1 from /opt/py3/lib/python3.6/site-packages (python 3.6)</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver requirements]# cd /server/sources/jumpserver/requirements  #pip在线安装</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver ~]# pip install --upgrade pip  -i https://mirrors.aliyun.com/pypi/simple/</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver ~]# pip install -r /opt/jumpserver/requirements/requirements.txt -i https://mirrors.aliyun.com/pypi/simple/</span><br></pre></td></tr></table></figure>
+
+<p>③. 安装 Redis, Jumpserver 使用 Redis 做 cache 和 celery broke</p>
+<p>（注意命令行的提示前缀；这里都不是py3虚拟环境）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver requirements]# yum  -y install redis</span><br><span class="line"></span><br><span class="line">[root@jumpserver requirements]# systemctl enable redis</span><br><span class="line">Created symlink from /etc/systemd/system/multi-user.target.wants/redis.service to /usr/lib/systemd/system/redis.service.</span><br><span class="line"></span><br><span class="line">[root@jumpserver requirements]# systemctl start redis</span><br></pre></td></tr></table></figure>
+
+<p>④. 安装 MySQL</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver requirements]# yum  install mariadb mariadb-devel mariadb-server   -y</span><br><span class="line"></span><br><span class="line">[root@jumpserver requirements]#  systemctl enable mariadb;systemctl start mariadb</span><br></pre></td></tr></table></figure>
+
+<p>⑤. 建数据库 Jumpserver 并授权</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver requirements]# mysql</span><br><span class="line"></span><br><span class="line">MariaDB [(none)]&gt; create database jumpserver default charset &apos;utf8&apos;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">MariaDB [(none)]&gt; grant all on jumpserver.* to &apos;jumpserver&apos;@&apos;127.0.0.1&apos; identified by &apos;123456&apos;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">MariaDB [(none)]&gt; exit;</span><br></pre></td></tr></table></figure>
+
+<p>⑥. 改 Jumpserver 配置文件</p>
+<p>将下载来的jumpserver移动到app目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line">[root@jumpserver requirements]# mkdir -p /server/app</span><br><span class="line"></span><br><span class="line">[root@jumpserver requirements]# cd /server/app/</span><br><span class="line"></span><br><span class="line">[root@jumpserver app]# cp -r /server/sources/jumpserver/ .</span><br><span class="line"></span><br><span class="line">[root@jumpserver app]# ls</span><br><span class="line">jumpserver</span><br><span class="line"></span><br><span class="line">[root@jumpserver jumpserver]#  cp config_example.py config.py</span><br><span class="line"></span><br><span class="line">[root@jumpserver jumpserver]# vim config.py  </span><br><span class="line"></span><br><span class="line">#编辑class DevelopmentConfig(Config):这一段；因为默认使用该配置</span><br><span class="line"></span><br><span class="line">class DevelopmentConfig(Config):</span><br><span class="line">    DEBUG = True</span><br><span class="line">    DB_ENGINE = &apos;mysql&apos;</span><br><span class="line">    DB_HOST = &apos;127.0.0.1&apos;</span><br><span class="line">    DB_PORT = 3306</span><br><span class="line">    DB_USER = &apos;jumpserver&apos;</span><br><span class="line">    DB_PASSWORD = &apos;123456&apos;</span><br><span class="line">    DB_NAME = &apos;jumpserver&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">最终效果：</span><br><span class="line"></span><br><span class="line">[root@jumpserver jumpserver]# cat config.py </span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">    jumpserver.config</span><br><span class="line">    ~~~~~~~~~~~~~~~~~</span><br><span class="line"></span><br><span class="line">    Jumpserver project setting file</span><br><span class="line"></span><br><span class="line">    :copyright: (c) 2014-2017 by Jumpserver Team</span><br><span class="line">    :license: GPL v2, see LICENSE for more details.</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">BASE_DIR = os.path.dirname(os.path.abspath(__file__))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class Config:</span><br><span class="line">    # Use it to encrypt or decrypt data</span><br><span class="line">    # SECURITY WARNING: keep the secret key used in production secret!</span><br><span class="line">    SECRET_KEY = os.environ.get(&apos;SECRET_KEY&apos;) or &apos;2vym+ky!997d5kkcc64mnz06y1mmui3lut#(^wd=%s_qj$1%x&apos;</span><br><span class="line"></span><br><span class="line">    # Django security setting, if your disable debug model, you should setting that</span><br><span class="line">    ALLOWED_HOSTS = [&apos;*&apos;]</span><br><span class="line"></span><br><span class="line">    # Development env open this, when error occur display the full process track, Production disable it</span><br><span class="line">    DEBUG = True</span><br><span class="line"></span><br><span class="line">    # DEBUG, INFO, WARNING, ERROR, CRITICAL can set. See https://docs.djangoproject.com/en/1.10/topics/logging/</span><br><span class="line">    LOG_LEVEL = &apos;DEBUG&apos;</span><br><span class="line">    LOG_DIR = os.path.join(BASE_DIR, &apos;logs&apos;)</span><br><span class="line"></span><br><span class="line">    # Database setting, Support sqlite3, mysql, postgres ....</span><br><span class="line">    # See https://docs.djangoproject.com/en/1.10/ref/settings/#databases</span><br><span class="line"></span><br><span class="line">    # SQLite setting:</span><br><span class="line">    DB_ENGINE = &apos;sqlite3&apos;</span><br><span class="line">    DB_NAME = os.path.join(BASE_DIR, &apos;data&apos;, &apos;db.sqlite3&apos;)</span><br><span class="line"></span><br><span class="line">    # MySQL or postgres setting like:</span><br><span class="line">    # DB_ENGINE = &apos;mysql&apos;</span><br><span class="line">    # DB_HOST = &apos;127.0.0.1&apos;</span><br><span class="line">    # DB_PORT = 3306</span><br><span class="line">    # DB_USER = &apos;root&apos;</span><br><span class="line">    # DB_PASSWORD = &apos;&apos;</span><br><span class="line">    # DB_NAME = &apos;jumpserver&apos;</span><br><span class="line"></span><br><span class="line">    # When Django start it will bind this host and port</span><br><span class="line">    # ./manage.py runserver 127.0.0.1:8080</span><br><span class="line">    HTTP_BIND_HOST = &apos;0.0.0.0&apos;</span><br><span class="line">    HTTP_LISTEN_PORT = 8080</span><br><span class="line"></span><br><span class="line">    # Use Redis as broker for celery and web socket</span><br><span class="line">    REDIS_HOST = &apos;127.0.0.1&apos;</span><br><span class="line">    REDIS_PORT = 6379</span><br><span class="line">    REDIS_PASSWORD = &apos;&apos;</span><br><span class="line">    BROKER_URL = &apos;redis://%(password)s%(host)s:%(port)s/3&apos; % &#123;</span><br><span class="line">        &apos;password&apos;: REDIS_PASSWORD,</span><br><span class="line">        &apos;host&apos;: REDIS_HOST,</span><br><span class="line">        &apos;port&apos;: REDIS_PORT,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    def __init__(self):</span><br><span class="line">        pass</span><br><span class="line"></span><br><span class="line">    def __getattr__(self, item):</span><br><span class="line">        return None</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#class DevelopmentConfig(Config):</span><br><span class="line">#    pass</span><br><span class="line">class DevelopmentConfig(Config):</span><br><span class="line">    DEBUG = True</span><br><span class="line">    DB_ENGINE = &apos;mysql&apos;</span><br><span class="line">    DB_HOST = &apos;127.0.0.1&apos;</span><br><span class="line">    DB_PORT = 3306</span><br><span class="line">    DB_USER = &apos;jumpserver&apos;</span><br><span class="line">    DB_PASSWORD = &apos;123456&apos;</span><br><span class="line">    DB_NAME = &apos;jumpserver&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class TestConfig(Config):</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class ProductionConfig(Config):</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Default using Config settings, you can write if/else for different env</span><br><span class="line">config = DevelopmentConfig()</span><br></pre></td></tr></table></figure>
+
+<p>⑦. 数据库表结构和初始化数据</p>
+<p><strong>(py3)虚拟环境下进行；且确保之前的pip已经安装完成了</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(py3) [root@jumpserver jumpserver]# cd /server/app/jumpserver/utils</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver utils]#  bash make_migrations.sh</span><br></pre></td></tr></table></figure>
+
+<p>⑧. 运行jumpserver</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(py3) [root@jumpserver utils]# cd /server/app/jumpserver/</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver jumpserver]# chmod +x jms </span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver jumpserver]# ./jms start all -d   #-d后台运行</span><br></pre></td></tr></table></figure>
+
+<p>jumpserver的使用方法：<strong>./jms start|stop|status|restart all</strong></p>
+<p>⑨. 访问测试</p>
+<p><a href="http://10.0.0.161:8080/" target="_blank" rel="noopener">http://10.0.0.161:8080/</a></p>
+<p>默认 账号：admin</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">密码：admin</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-组件"><a href="#安装-组件" class="headerlink" title="安装 组件"></a>安装 组件</h3><p>在web页面上点击web终端</p>
+<p>会看到：</p>
+<p>Luna是单独部署的一个程序，你需要部署luna，coco，配置nginx做url分发, 如果你看到了这个页面，证明你访问的不是nginx监听的端口，祝你好运</p>
+<p><strong>所以接下来，我们安装luna和coco</strong></p>
+<h4 id="安装coco"><a href="#安装coco" class="headerlink" title="安装coco"></a>安装coco</h4><p>**coco实现了</p>
+<p>SSH Server 和 Web Terminal Server 的组件，提供 SSH 和 WebSocket 接口,</p>
+<p>使用 Paramiko 和 Flask 开发**</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">(py3) [root@jumpserver coco]# cd /server/sources/coco/requirements/</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver requirements]# yum install `cat rpm_requirements.txt`</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver requirements]# pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver requirements]# cp -r /server/sources/coco/ /server/app/</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver requirements]# cd /server/app/coco/</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver coco]# cp conf_example.py conf.py</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver coco]# chmod +x cocod </span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver coco]# ./cocod start -d</span><br><span class="line">Start coco process</span><br></pre></td></tr></table></figure>
+
+<p>使用方法：<strong>./cocod start|stop|status|restart</strong></p>
+<h4 id="安装Web-Terminal前端-Luna组件"><a href="#安装Web-Terminal前端-Luna组件" class="headerlink" title="安装Web-Terminal前端-Luna组件"></a>安装Web-Terminal前端-Luna组件</h4><p><strong>Luna概述：Luna现在是 Web Terminal 前端，计划前端页面都由该项目提供，Jumpserver 只提供 API，不再负责后台渲染html等</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(py3) [root@jumpserver coco]# cd /server/sources/</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver sources]# tar xf luna.tar.gz </span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver sources]# cp -r luna /server/app/</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置Nginx整合各组件"><a href="#配置Nginx整合各组件" class="headerlink" title="配置Nginx整合各组件"></a>配置Nginx整合各组件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(py3) [root@jumpserver sources]#  yum -y install nginx</span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver sources]# vim /etc/nginx/^Cinx.conf</span><br><span class="line">将原先的server&#123;&#125; 段全部替换掉</span><br></pre></td></tr></table></figure>
+
+<p>** 最终的结果如下：**</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">(py3) [root@jumpserver nginx]# grep -Ev &quot;#|^$&quot; /etc/nginx/nginx.conf</span><br><span class="line">user nginx;</span><br><span class="line">worker_processes auto;</span><br><span class="line">error_log /var/log/nginx/error.log;</span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line">include /usr/share/nginx/modules/*.conf;</span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">    log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">                      &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">                      &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</span><br><span class="line">    access_log  /var/log/nginx/access.log  main;</span><br><span class="line">    sendfile            on;</span><br><span class="line">    tcp_nopush          on;</span><br><span class="line">    tcp_nodelay         on;</span><br><span class="line">    keepalive_timeout   65;</span><br><span class="line">    types_hash_max_size 2048;</span><br><span class="line">    include             /etc/nginx/mime.types;</span><br><span class="line">    default_type        application/octet-stream;</span><br><span class="line">    include /etc/nginx/conf.d/*.conf;</span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">    proxy_set_header Host $host;</span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">    location /luna/ &#123;</span><br><span class="line">        try_files $uri / /index.html;</span><br><span class="line">        alias /server/app/luna/;</span><br><span class="line">    &#125;</span><br><span class="line">    location /media/ &#123;</span><br><span class="line">        add_header Content-Encoding gzip;</span><br><span class="line">        root /server/app/jumpserver/data/;</span><br><span class="line">    &#125;</span><br><span class="line">    location /static/ &#123;</span><br><span class="line">        root /server/app/jumpserver/data/;</span><br><span class="line">    &#125;</span><br><span class="line">    location /socket.io/ &#123;</span><br><span class="line">        proxy_buffering off;</span><br><span class="line">        proxy_http_version 1.1;</span><br><span class="line">        proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">        proxy_set_header Connection &quot;upgrade&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>语法检查</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(py3) [root@jumpserver sources]# nginx -t</span><br><span class="line">nginx: the configuration file /etc/nginx/nginx.conf syntax is ok</span><br><span class="line">nginx: configuration file /etc/nginx/nginx.conf test is successful</span><br></pre></td></tr></table></figure>
+
+<p>运行 Nginx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(py3) [root@jumpserver nginx]# systemctl start nginx </span><br><span class="line"></span><br><span class="line">(py3) [root@jumpserver nginx]# systemctl enable nginx </span><br><span class="line">Created symlink from /etc/systemd/system/multi-user.target.wants/nginx.service to /usr/lib/systemd/system/nginx.service.</span><br></pre></td></tr></table></figure>
+
+<p>在web页面上点击</p>
+<p>默认信息，确认即可</p>
+<p>服务器命令行终端测试：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">(py3) [root@jumpserver nginx]# ssh -p2222 admin@10.0.0.161</span><br><span class="line">The authenticity of host &apos;[10.0.0.161]:2222 ([10.0.0.161]:2222)&apos; can&apos;t be established.</span><br><span class="line">RSA key fingerprint is SHA256:8MCnHK0t1yfaxyf6fFq1e93fE9JDBc4hG00OlnWelXY.</span><br><span class="line">RSA key fingerprint is MD5:b5:6d:74:d6:00:90:f4:93:8f:b8:de:33:14:ea:6b:ee.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)? yes</span><br><span class="line">Warning: Permanently added &apos;[10.0.0.161]:2222&apos; (RSA) to the list of known hosts.</span><br><span class="line">admin@10.0.0.161&apos;s password: #填写admin的密码admin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    Administrator, 欢迎使用Jumpserver开源跳板机系统  </span><br><span class="line"></span><br><span class="line">    1) 输入 ID 直接登录 或 输入部分 IP,主机名,备注 进行搜索登录(如果唯一).</span><br><span class="line">    2) 输入 / + IP, 主机名 or 备注 搜索. 如: /ip</span><br><span class="line">    3) 输入 P/p 显示您有权限的主机.</span><br><span class="line">    4) 输入 G/g 显示您有权限的主机组.</span><br><span class="line">    5) 输入 G/g + 组ID 显示该组下主机. 如: g1</span><br><span class="line">    6) 输入 H/h 帮助.</span><br><span class="line">    0) 输入 Q/q 退出.</span><br></pre></td></tr></table></figure>
+
+<p>用10.0.0.161就可以直接访问了，不需要再加8080</p>
+<p><strong>到此安装成功</strong></p>
+
+    </div>
+
+    
+    
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:20px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+      
+  <div class="popular-posts-header">相关文章推荐</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\50429.html" rel="bookmark">linux是什么</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\45001.html" rel="bookmark">linux的发展</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\29967.html" rel="bookmark">wc统计详解</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\33512.html" rel="bookmark">vmware安装ubuntu18.10时出现显示不全问题</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\1047793652.html" rel="bookmark">开始之前</a></div>
+      
+    </li>
+  
+  </ul>
+
+        
+      
+        <div id="reward-container">
+  <div>坚持原创分享，您的支持将鼓励我继续创作！</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="25℃ 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="25℃ 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>25℃</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://25share.com/28943.html" title="堡垒机-jumpserver">https://25share.com/28943.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/linux/" rel="tag"><i class="fa fa-flag"></i> linux</a>
+            
+              <a href="/tags/server/" rel="tag"><i class="fa fa-flag"></i> server</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/39417.html" rel="next" title="个人博客折腾记">
+                  <i class="fa fa-chevron-left"></i> 个人博客折腾记
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/17695.html" rel="prev" title="安利好用的工具及软件之（一）">
+                  安利好用的工具及软件之（一） <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="comments"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#官方网站"><span class="nav-text">官方网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jumpserver-软件包环境要求："><span class="nav-text">Jumpserver 软件包环境要求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手动本地jumpserver-服务端搭建"><span class="nav-text">手动本地jumpserver-服务端搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化一些系统环境设置："><span class="nav-text">初始化一些系统环境设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-创建软件包放置目录："><span class="nav-text">1. 创建软件包放置目录：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-关闭防火墙"><span class="nav-text">2. 关闭防火墙</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-关闭selinux"><span class="nav-text">3. 关闭selinux</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-如果生产环境需要开启selinux和防火墙的情况下则使用-直接复制整段进命令行运行即可-："><span class="nav-text">4. 如果生产环境需要开启selinux和防火墙的情况下则使用(直接复制整段进命令行运行即可)：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-配置中文环境（整段复制到命令行运行即可）："><span class="nav-text">5. 配置中文环境（整段复制到命令行运行即可）：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装相关软件"><span class="nav-text">安装相关软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖软件"><span class="nav-text">依赖软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译安装python3-6-1"><span class="nav-text">编译安装python3.6.1</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用-Python-虚拟环境（使多版本的python互不影响，共存）"><span class="nav-text">使用 Python 虚拟环境（使多版本的python互不影响，共存）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Jumpserver"><span class="nav-text">安装 Jumpserver</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-组件"><span class="nav-text">安装 组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装coco"><span class="nav-text">安装coco</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Web-Terminal前端-Luna组件"><span class="nav-text">安装Web-Terminal前端-Luna组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置Nginx整合各组件"><span class="nav-text">配置Nginx整合各组件</span></a></li></ol></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="25℃">
+  <p class="site-author-name" itemprop="name">25℃</p>
+  <div class="site-description" itemprop="description">linux|python|自动化|阅读|美剧|日剧|宅女</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="chat motion-element"><i class="fa fa-comment"></i>
+    Chat
+  </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/zzzhbt" title="GitHub &rarr; https://github.com/zzzhbt" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:zzzhbr@163.com" title="E-Mail &rarr; mailto:zzzhbr@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=201856030&site=qq&menu=yes" title="QQ &rarr; http://wpa.qq.com/msgrd?v=3&uin=201856030&site=qq&menu=yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>QQ</a>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">本站配合电脑版食用更佳哦！(*^▽^*)</span>
+</div>
+<span id="runtime_span"></span>
+<script type="text/javascript">
+function show_runtime()
+{window.setTimeout("show_runtime()",1000);X=new 
+Date("8/27/2019 15:00:00");
+Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
+a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
+runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+    
+  
+  <script color='0,0,255' opacity='0.2' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'lrRGyr2D5zoMeMWGPahob39R-MdYXbMMI',
+    appKey: 'ety7zsnIRFtLVElqlPlvlC68',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: '' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
+
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<div id="aplayer" class="aplayer"  data-id="2889986160" data-server="netease" data-type="playlist" data-fixed="true" data-listfolded="true" data-order="random" data-theme="#F58EA8"></div>
+<script type="text/javascript" src="/dist/Meting.min.js"></script>
+<!--崩溃欺骗-->
+  <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+
+</body>
+</html>
+
+

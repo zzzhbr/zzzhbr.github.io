@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://25share.com/"/>
-  <updated>2019-09-25T11:58:33.248Z</updated>
+  <updated>2019-10-05T05:45:02.598Z</updated>
   <id>https://25share.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>开始之前</title>
+    <link href="https://25share.com/1047793652.html"/>
+    <id>https://25share.com/1047793652.html</id>
+    <published>2019-10-05T05:19:38.645Z</published>
+    <updated>2019-10-05T05:45:02.598Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>为什么要学linux，或许大家有各自的原因，或想要找份工作，或对linux感兴趣，或觉得很炫酷想要了解！</p><a id="more"></a><p>① 那么linux是什么?</p><p>② 什么是操作系统？<br>③ 操作系统有什么用？</p><p>④那么学会linux能找什么工作呢？</p><p>⑤ linux是怎么来的？</p><p>⑥ 它为什么会这么受欢迎？</p><p>⑦ 企业，公司有没有使用linux操作系统的？</p><p>有一个后台使用系统统计的网站：<a href="https://www.netcraft.com" target="_blank" rel="noopener">https://www.netcraft.com</a><br>或许你把你常逛的网址输进去，得到的答案或许会让你吃惊，绝大部分都是linux系统<br>有的部分可能会显示unknown（例如51cto），这个或许用的是unix系统，又或许是自己改写的系统</p><p>但是，你输入域名例如： 淘宝，博客园，github，百度<br>哪怕是，微软（<a href="https://www.microsoft.com/zh-cn）" target="_blank" rel="noopener">https://www.microsoft.com/zh-cn）</a><br>你都会发现他们的操作系统都是linux<br>所以使用linux的企业真的是非常多的 </p><p>学会linux之后或许你就会对当我们输入一个域名，例如：baidu.com按下回车之后为什么最后会跳转到<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>或者当输入<a href="http://www.baidu.com回车之后，究竟发生了些什么，才能让我们看到百度为我们提供的页面" target="_blank" rel="noopener">www.baidu.com回车之后，究竟发生了些什么，才能让我们看到百度为我们提供的页面</a><br>以及为什么数万人以及数百万人可以同时在线玩一个游戏；<br>以及无论何时我们想要购物去访问淘宝时，都能下单买到；<br>以及京东在双十一或其他任何全面抢购的购物街时候服务器发生了什么变化来应对突然暴增的访问以及购买；<br>你还能搭建出一个属于你的网站：博客、论坛、购物、聊天  等等</p><p>more</p><p>特别说明：本集视频中所说的GNU目的是免费自由的这一说法是错误的；<br>什么是自由软件？<br>自由软件意味着使用者有运行、复制、发布、研究、修改和改进该软件的自由。</p><p>自由软件是权利问题，不是价格问题。要理解这个概念，你应该考虑“free”是“言论自由（free speech）”中的“自由”；而不是“免费啤酒（free beer）”中的“免费”。</p><p>更精确地说，自由软件赋予软件使用者四项基本自由：</p><p>不论目的为何，有运行该软件的自由（自由之零）。<br>有研究该软件如何工作以及按需改写该软件的自由（自由之一）。取得该软件源代码为达成此目的之前提。<br>有重新发布拷贝的自由，这样你可以借此来敦亲睦邻（自由之二）。<br>有向公众发布改进版软件的自由（自由之三），这样整个社群都可因此受惠。取得该软件源码为达成此目的之前提。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;为什么要学linux，或许大家有各自的原因，或想要找份工作，或对linux感兴趣，或觉得很炫酷想要了解！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="https://25share.com/categories/linux/"/>
+    
+      <category term="基础" scheme="https://25share.com/categories/linux/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="linux" scheme="https://25share.com/tags/linux/"/>
+    
+      <category term="linux基础" scheme="https://25share.com/tags/linux%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>更换电脑后如何继续用hexo写博客</title>
-    <link href="https://25share.com/2019/09/25/%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E7%BB%A7%E7%BB%AD%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2.html"/>
-    <id>https://25share.com/2019/09/25/换电脑后如何继续用hexo写博客.html</id>
+    <link href="https://25share.com/49888.html"/>
+    <id>https://25share.com/49888.html</id>
     <published>2019-09-25T11:43:33.847Z</published>
-    <updated>2019-09-25T11:58:33.248Z</updated>
+    <updated>2019-09-25T12:01:44.896Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>如何在更换电脑后如何继续用hexo写博客</p><a id="more"></a><h1 id="1-安装必要的软件"><a href="#1-安装必要的软件" class="headerlink" title="1.安装必要的软件"></a>1.安装必要的软件</h1><ul><li>git</li><li>node.js<br>软件按照正常安装即可</li></ul><h1 id="2-blog源目录拷贝"><a href="#2-blog源目录拷贝" class="headerlink" title="2. blog源目录拷贝"></a>2. blog源目录拷贝</h1><p>一种是将旧电脑中的blog目录拷贝；<br>另一种就是github上直接下载</p><h1 id="3-hexo"><a href="#3-hexo" class="headerlink" title="3. hexo"></a>3. hexo</h1><p>安装hexo<br>在CMD中输入安装指令，可以使用<code>-g</code>全局安装</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><p>然后进入blog目录,按住shift点击在此处打开命令行终端</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><h1 id="4-生成新的ssh-key"><a href="#4-生成新的ssh-key" class="headerlink" title="4. 生成新的ssh-key"></a>4. 生成新的ssh-key</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p><a href="mailto:your_email@example.com" target="_blank" rel="noopener">your_email@example.com</a>改成你的账户邮箱即可</p><p>一般默认一路回车就好</p><p>进入ssh密钥生成目录，一般在命令结束后会有提示保存位置，一般是在C:\Users\用户名.ssh，然后打开id_rsa.pub文件，复制里面所有的内容，<br>然后进入 github 页面，点击右上角的 头像 &gt; Settings ，在左侧找到SSH and GPG keys。</p><p>点击New SSH key ，Title 里的内容可以自定义，Key 里填入复制的内容。点击 add key。</p><p>返回窗口，输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line">若弹出Are you sure you want to continue connecting (yes/no)? 时输入 yes 确认。</span><br><span class="line">接着出现 Hi xxx! You&apos;ve successfully authenticated, but GitHub does not provide shell access. 则操作成功。</span><br></pre></td></tr></table></figure><p>然后可以用命令测试是否成功</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean // 清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line">hexo g // 生成静态网页</span><br><span class="line">hexo s // 启动服务器</span><br><span class="line">hexo d //推送到git上</span><br></pre></td></tr></table></figure><p>报错</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Run</span><br><span class="line"></span><br><span class="line">  git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">  git config --global user.name &quot;Your Name&quot;</span><br><span class="line"></span><br><span class="line">to set your account&apos;s default identity.</span><br><span class="line">Omit --global to set the identity only in this repository.</span><br><span class="line"></span><br><span class="line">fatal: unable to auto-detect email address (got &apos;zzz@zzz-PC.(none)&apos;)</span><br><span class="line">Warning: Permanently added the RSA host key for IP address &apos;13.250.177.223&apos; to the list of known hosts.</span><br><span class="line">Everything up-to-date</span><br><span class="line">Branch &apos;master&apos; set up to track remote branch &apos;master&apos; from &apos;git@github.com:zzzhbr/zzzhbr.github.io.git&apos;.</span><br><span class="line"></span><br><span class="line">*** Please tell me who you are.</span><br></pre></td></tr></table></figure><p>也比较简单，只需要将</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br></pre></td></tr></table></figure><p>两条命令的双引号里的内容改成你自己的就可以</p>]]></content>
     
@@ -41,8 +68,8 @@
   
   <entry>
     <title>win10没有右键新建文本文件解决方法</title>
-    <link href="https://25share.com/2019/09/25/win10%E6%B2%A1%E6%9C%89%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html"/>
-    <id>https://25share.com/2019/09/25/win10没有右键新建文本文件解决方法.html</id>
+    <link href="https://25share.com/50582.html"/>
+    <id>https://25share.com/50582.html</id>
     <published>2019-09-25T11:00:23.229Z</published>
     <updated>2019-09-25T11:38:51.647Z</updated>
     
@@ -65,8 +92,8 @@
   
   <entry>
     <title>安利好用的工具及软件之（二）</title>
-    <link href="https://25share.com/2019/09/22/%E5%AE%89%E5%88%A9%E5%A5%BD%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%BD%AF%E4%BB%B6%E4%B9%8B%EF%BC%88%E4%BA%8C%EF%BC%89.html"/>
-    <id>https://25share.com/2019/09/22/安利好用的工具及软件之（二）.html</id>
+    <link href="https://25share.com/1.html"/>
+    <id>https://25share.com/1.html</id>
     <published>2019-09-22T10:47:44.197Z</published>
     <updated>2019-09-22T10:59:31.153Z</updated>
     
@@ -92,8 +119,8 @@
   
   <entry>
     <title>word和markdown的转换</title>
-    <link href="https://25share.com/2019/09/22/word%E5%92%8Cmarkdown%E7%9A%84%E8%BD%AC%E6%8D%A2.html"/>
-    <id>https://25share.com/2019/09/22/word和markdown的转换.html</id>
+    <link href="https://25share.com/7034.html"/>
+    <id>https://25share.com/7034.html</id>
     <published>2019-09-22T10:09:47.584Z</published>
     <updated>2019-09-22T10:50:30.180Z</updated>
     
@@ -117,8 +144,8 @@
   
   <entry>
     <title>wc统计详解</title>
-    <link href="https://25share.com/2019/09/15/wc%E7%BB%9F%E8%AE%A1%E8%AF%A6%E8%A7%A3.html"/>
-    <id>https://25share.com/2019/09/15/wc统计详解.html</id>
+    <link href="https://25share.com/29967.html"/>
+    <id>https://25share.com/29967.html</id>
     <published>2019-09-15T07:44:41.523Z</published>
     <updated>2019-09-15T07:49:29.666Z</updated>
     
@@ -144,8 +171,8 @@
   
   <entry>
     <title>linux的发展</title>
-    <link href="https://25share.com/2019/09/11/2.linux%E7%9A%84%E5%8F%91%E5%B1%95.html"/>
-    <id>https://25share.com/2019/09/11/2.linux的发展.html</id>
+    <link href="https://25share.com/45001.html"/>
+    <id>https://25share.com/45001.html</id>
     <published>2019-09-11T08:11:42.082Z</published>
     <updated>2019-09-15T06:19:54.920Z</updated>
     
@@ -171,8 +198,8 @@
   
   <entry>
     <title>linux是什么</title>
-    <link href="https://25share.com/2019/09/11/1.linux%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F.html"/>
-    <id>https://25share.com/2019/09/11/1.linux是什么？.html</id>
+    <link href="https://25share.com/50429.html"/>
+    <id>https://25share.com/50429.html</id>
     <published>2019-09-11T06:49:07.028Z</published>
     <updated>2019-09-15T06:20:28.685Z</updated>
     
@@ -199,8 +226,8 @@
   
   <entry>
     <title>在导入python(tab)模块时报错</title>
-    <link href="https://25share.com/2019/09/10/%E5%9C%A8%E5%AF%BC%E5%85%A5python%EF%BC%88tab%EF%BC%89%E6%A8%A1%E5%9D%97%E6%97%B6%E6%8A%A5%E9%94%99.html"/>
-    <id>https://25share.com/2019/09/10/在导入python（tab）模块时报错.html</id>
+    <link href="https://25share.com/19112.html"/>
+    <id>https://25share.com/19112.html</id>
     <published>2019-09-10T04:40:08.417Z</published>
     <updated>2019-09-15T06:18:52.129Z</updated>
     
@@ -222,8 +249,8 @@
   
   <entry>
     <title>vmware安装ubuntu18.10时出现显示不全问题</title>
-    <link href="https://25share.com/2019/09/10/vmware15pro%E5%AE%89%E8%A3%85ubuntu18.10%E6%97%B6%E5%87%BA%E7%8E%B0%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98.html"/>
-    <id>https://25share.com/2019/09/10/vmware15pro安装ubuntu18.10时出现显示不全问题.html</id>
+    <link href="https://25share.com/33512.html"/>
+    <id>https://25share.com/33512.html</id>
     <published>2019-09-10T04:02:41.610Z</published>
     <updated>2019-09-15T06:20:16.267Z</updated>
     
@@ -247,8 +274,8 @@
   
   <entry>
     <title>win右键菜单添加程序</title>
-    <link href="https://25share.com/2019/09/09/win%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%B7%BB%E5%8A%A0%E7%A8%8B%E5%BA%8F.html"/>
-    <id>https://25share.com/2019/09/09/win右键菜单添加程序.html</id>
+    <link href="https://25share.com/24529.html"/>
+    <id>https://25share.com/24529.html</id>
     <published>2019-09-09T11:56:42.938Z</published>
     <updated>2019-09-15T06:19:38.933Z</updated>
     
@@ -270,8 +297,8 @@
   
   <entry>
     <title>阅读书单</title>
-    <link href="https://25share.com/2019/09/09/%E9%98%85%E8%AF%BB%E4%B9%A6%E5%8D%95.html"/>
-    <id>https://25share.com/2019/09/09/阅读书单.html</id>
+    <link href="https://25share.com/12461.html"/>
+    <id>https://25share.com/12461.html</id>
     <published>2019-09-09T05:23:05.966Z</published>
     <updated>2019-09-15T06:19:00.919Z</updated>
     
@@ -295,8 +322,8 @@
   
   <entry>
     <title>安利好用的工具及软件之（一）</title>
-    <link href="https://25share.com/2019/09/09/%E5%AE%89%E5%88%A9%E5%A5%BD%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%BD%AF%E4%BB%B6%E4%B9%8B%EF%BC%88%E4%B8%80%EF%BC%89.html"/>
-    <id>https://25share.com/2019/09/09/安利好用的工具及软件之（一）.html</id>
+    <link href="https://25share.com/17695.html"/>
+    <id>https://25share.com/17695.html</id>
     <published>2019-09-09T04:19:53.697Z</published>
     <updated>2019-09-15T06:21:01.162Z</updated>
     
@@ -318,8 +345,8 @@
   
   <entry>
     <title>堡垒机-jumpserver</title>
-    <link href="https://25share.com/2019/09/07/%E5%A0%A1%E5%9E%92%E6%9C%BA-jumpserver.html"/>
-    <id>https://25share.com/2019/09/07/堡垒机-jumpserver.html</id>
+    <link href="https://25share.com/28943.html"/>
+    <id>https://25share.com/28943.html</id>
     <published>2019-09-07T13:15:25.811Z</published>
     <updated>2019-09-15T06:20:04.113Z</updated>
     
@@ -345,8 +372,8 @@
   
   <entry>
     <title>个人博客折腾记</title>
-    <link href="https://25share.com/2019/09/07/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%8A%98%E8%85%BE%E8%AE%B0.html"/>
-    <id>https://25share.com/2019/09/07/个人博客折腾记.html</id>
+    <link href="https://25share.com/39417.html"/>
+    <id>https://25share.com/39417.html</id>
     <published>2019-09-07T13:15:25.810Z</published>
     <updated>2019-09-15T06:18:43.354Z</updated>
     
@@ -368,8 +395,8 @@
   
   <entry>
     <title>git+hexo打造属于你的网站</title>
-    <link href="https://25share.com/2019/09/07/git+hexo%E6%89%93%E9%80%A0%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99.html"/>
-    <id>https://25share.com/2019/09/07/git+hexo打造属于你的网站.html</id>
+    <link href="https://25share.com/5471.html"/>
+    <id>https://25share.com/5471.html</id>
     <published>2019-09-07T13:15:25.807Z</published>
     <updated>2019-09-15T06:19:25.702Z</updated>
     
@@ -392,8 +419,8 @@
   
   <entry>
     <title>xmind双击文件无法打开及破解大法</title>
-    <link href="https://25share.com/2019/09/02/xmind%E5%8F%8C%E5%87%BB%E6%97%A0%E6%95%88.html"/>
-    <id>https://25share.com/2019/09/02/xmind双击无效.html</id>
+    <link href="https://25share.com/61189.html"/>
+    <id>https://25share.com/61189.html</id>
     <published>2019-09-02T01:40:29.357Z</published>
     <updated>2019-09-15T06:20:33.762Z</updated>
     
@@ -418,8 +445,8 @@
   
   <entry>
     <title>在移动硬盘安装系统</title>
-    <link href="https://25share.com/2019/07/28/%E5%9C%A8%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F.html"/>
-    <id>https://25share.com/2019/07/28/在移动硬盘安装系统.html</id>
+    <link href="https://25share.com/51315.html"/>
+    <id>https://25share.com/51315.html</id>
     <published>2019-07-28T02:53:04.946Z</published>
     <updated>2019-09-16T06:58:10.097Z</updated>
     
