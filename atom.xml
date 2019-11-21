@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://25share.com/"/>
-  <updated>2019-11-19T06:54:55.984Z</updated>
+  <updated>2019-11-21T09:39:11.035Z</updated>
   <id>https://25share.com/</id>
   
   <author>
@@ -17,11 +17,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vmware安装黑苹果-MacOS</title>
+    <link href="https://25share.com/3962893675.html"/>
+    <id>https://25share.com/3962893675.html</id>
+    <published>2019-11-21T09:30:29.302Z</published>
+    <updated>2019-11-21T09:39:11.035Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><p>没有苹果电脑，但是想要玩一玩mac系统，又或者临时有需要用到，该怎么办呢？</p><a id="more"></a><h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h1><p>首先安装添加mac选项的工具</p><p>然后修改创建的mac的修改VMX<br>在smc.present = “TRUE”下面添加下面内容即可 （右键以记事本方式打开即可）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smc.version = &quot;0&quot;</span><br></pre></td></tr></table></figure><p>然后就可以开始安装MacOS了<br>安装过程只需要耐心些就好，速度快慢全看配置，内存太低的&lt;8G的就不要尝试了，就算装好了，我估计也是卡死</p><h1 id="2-全屏"><a href="#2-全屏" class="headerlink" title="2. 全屏"></a>2. 全屏</h1><p>安装完成以后不能全屏，<br>所以先安装vmtools，安装完vmtools若是还是没有分辨率更改的话，那么就要进行以下操作了</p><p>首先将com.vmware.fusion.tools.windows.zip.tar包放进mac系统里<br>然后在Mac虚拟机里的终端执行下面的命令，执行完之后关机</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo nvram AC20C489-DD86-4E99-992C-B7C742C1DDA9:width=%80%07%00%00</span><br><span class="line">sudo nvram AC20C489-DD86-4E99-992C-B7C742C1DDA9:height=%38%04%00%00</span><br></pre></td></tr></table></figure><p>接着修改mac的vmx加入以下代码（右键以记事本方式打开即可）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">svga.autodetect = &quot;FALSE&quot;</span><br><span class="line">svga.maxWidth = &quot;3840&quot;</span><br><span class="line">svga.maxHeight = &quot;2160&quot;</span><br></pre></td></tr></table></figure><p>最后开启<br>就能看到高分辨率了，就能全屏了</p><h1 id="3-文件共享"><a href="#3-文件共享" class="headerlink" title="3. 文件共享"></a>3. 文件共享</h1><p>最后如果你想要实现mac和win文件共享，那么可以进行以下操作<br>虚拟机关机<br>然后<br> <div align="center"><br>    <img alt="设置" width="40%" height="40%" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/gitnote/2019/11/21/1-1574328181217.png"></div></p><p>此方法如不成功，可以用以下方式操作<br>选择用来共享的文件夹<br>右键 —–&gt; 属性 —–&gt; 共享<br>以这种方式来共享</p><p>win设置好了以后就可以去mac系统操作访问测试了</p><div align="center">    <img alt="测试" width="40%" height="40%" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/gitnote/2019/11/21/2-1574328342280.png"></div><p>输入smb://win系统IP地址<br>连接测试</p><p>如果连接不上去，可以去看看win系统的设置<code>win+r</code>，输入<code>secpol.msc</code><br>然后看看这里的权限等开启了没有</p><div align="center">    <img alt="测试" width="40%" height="40%" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/gitnote/2019/11/21/3.-1574328494286.png"></div><p>总的来说就是<br>1，在运行里面输入”secpol.msc”来启动本地安全设置，然后选择本地策略–&gt;安全选项 –&gt;网络安全LAN 管理器身份验证级别，“安全设置”选项默认是“没定义”。修改成“发送 LM 和 NTMLM响应(&amp;)”或者“发送 LM 和 NTMLM - 如果已协商，则使用NTLMv2 会话安全”</p><p>2，如果不行，看刚才打开的本地安全设置里，本地策略–&gt;安全选项 –&gt;来宾账户状态这个选项是禁用的，打开查看。大致意思是说明这个选项关闭的话SMB服务就无法使用，因为UNIX用于共享的就是SMB服务，于是将其打开。</p><p>3，如果还是不行，还是在安全选项里，将网络访问：本地账户的共享和安全模型设置为“经典”。</p><p>然后回到mac重新连接就成功了</p><br><br><h1 id="4-最后"><a href="#4-最后" class="headerlink" title="4. 最后"></a>4. 最后</h1><p>链接防走丢，提供技术支持</p><div align="center">    <img alt="联系方式：扫一扫加我" width="30%" height="30%" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/gitnote/2019/11/17/Snipaste_2019-11-17_13-17-35-1573967877033.png"></div><p>扫一扫添加</p><p>或添加QQ：201856030</p><p>法律责任：<br>                 关于法律责任 25℃ Share Time 郑重声明如下：<br>1、25℃ 致力于为用户提供国内外软件的安装技术支持，着力于让用户获得第一手资料。<br>2、25℃ 提供的所有下载文件均为网络共享资源，请于下载后的24小时内删除。如需体验更多乐趣，还请支持正版。<br>3、我们提供用户下载的所有内容均来自互联网。如有内容侵犯您的版权或其他利益的，请编辑邮件并加以说明发送给我们；邮箱<a href="mailto:201856030@qq.com" target="_blank" rel="noopener">201856030@qq.com</a> 或联系QQ:201856030。我们会在收到消息后的三个工作日内处理。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h1&gt;&lt;p&gt;没有苹果电脑，但是想要玩一玩mac系统，又或者临时有需要用到，该怎么办呢？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="tips" scheme="https://25share.com/categories/tips/"/>
+    
+      <category term="软件" scheme="https://25share.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="教程" scheme="https://25share.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="软件" scheme="https://25share.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="教程" scheme="https://25share.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="win" scheme="https://25share.com/tags/win/"/>
+    
+      <category term="mac" scheme="https://25share.com/tags/mac/"/>
+    
+      <category term="vmware" scheme="https://25share.com/tags/vmware/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CDR MAC系统安装方法</title>
     <link href="https://25share.com/3977615158.html"/>
     <id>https://25share.com/3977615158.html</id>
     <published>2019-11-19T06:54:55.983Z</published>
-    <updated>2019-11-19T06:54:55.984Z</updated>
+    <updated>2019-11-19T06:55:20.006Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>CorelDRAW简称CDR MAC系统安装方法</p><a id="more"></a><p>安装方法：</p><p>1、先安装『CorelDRAW Graphics Suite 2019.pkg』，安装到 【序列号】 一步的时候，选择我没有序列号，想试用产品，然后继续安装到完成。<br>2、完成后，先不要打开软件CorelDRAW，继续安装『2019 Up2.pkg』更新包，默认安装。<br>3、完成后，打开软件CorelDRAW 2019，就是中文了。</p><p>如果打开软件，还是英文，那么点击菜单栏，CorelDRAW 2019 -&gt;  Preferences -&gt; Global… ，打开后，language选择中文，重启软件就好了。</p><p>链接防走丢，提供技术支持</p><div align="left">    <img alt="联系方式：扫一扫加我" width="30%" height="30%" data-src="https://raw.githubusercontent.com/zzzhbr/notebook-image/master/gitnote/2019/11/17/Snipaste_2019-11-17_13-17-35-1573967877033.png"></div><p>扫一扫添加</p><p>或添加QQ：201856030</p><p>更多详情QQ详聊</p><hr><p>下载安装步骤：</p><p>1、请打开浏览器，输入<a href="http://www.25share.com" target="_blank" rel="noopener">www.25share.com</a>     </p><p>2、在搜索栏里搜索：例如adobe   得到下载地址及安装方法</p><hr><p>法律责任：<br>                 关于法律责任 25℃ Share Time 郑重声明如下：<br>1、25℃ 致力于为用户提供国内外软件的安装技术支持，着力于让中国软件用户获得第一手资料。<br>2、25℃ 提供的所有下载文件均为网络共享资源，请于下载后的24小时内删除。如需体验更多乐趣，还请支持正版。<br>3、我们提供用户下载的所有内容均来自互联网。如有内容侵犯您的版权或其他利益的，请编辑邮件并加以说明发送给我们；邮箱<a href="mailto:201856030@qq.com" target="_blank" rel="noopener">201856030@qq.com</a> 或联系QQ:201856030。我们会在收到消息后的三个工作日内处理。</p>]]></content>
     
@@ -95,11 +130,11 @@
     </summary>
     
     
+      <category term="软件" scheme="https://25share.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
       <category term="win" scheme="https://25share.com/categories/win/"/>
     
       <category term="adobe" scheme="https://25share.com/categories/adobe/"/>
-    
-      <category term="软件" scheme="https://25share.com/categories/%E8%BD%AF%E4%BB%B6/"/>
     
     
       <category term="软件" scheme="https://25share.com/tags/%E8%BD%AF%E4%BB%B6/"/>
@@ -505,33 +540,6 @@
       <category term="linux" scheme="https://25share.com/tags/linux/"/>
     
       <category term="vmware" scheme="https://25share.com/tags/vmware/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux系统如何获取</title>
-    <link href="https://25share.com/848315681.html"/>
-    <id>https://25share.com/848315681.html</id>
-    <published>2019-11-13T10:00:00.594Z</published>
-    <updated>2019-10-05T06:54:01.043Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>linux系统如何获取：</p><a id="more"></a><p>一、官网</p><p>centos官网：<a href="https://www.centos.org/" target="_blank" rel="noopener">https://www.centos.org/</a></p><p>ubuntu官网：</p><p>各自的发行版本官网</p><p>二、镜像列表：mirror-status.centos.org</p><p>三、多版本镜像获取国内源：</p><p>　　阿里巴巴：<a href="https://opsx.alibaba.com/mirror" target="_blank" rel="noopener">https://opsx.alibaba.com/mirror</a></p><p>　　网易：<a href="http://mirrors.163.com/" target="_blank" rel="noopener">http://mirrors.163.com/</a></p><p>　　搜狐：<a href="http://mirrors.sohu.com/" target="_blank" rel="noopener">http://mirrors.sohu.com/</a></p><p>　　清华大学：<a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/</a></p><p>四、搜索引擎</p><p>搜索方式：mirror 站点</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;linux系统如何获取：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="https://25share.com/categories/linux/"/>
-    
-      <category term="基础" scheme="https://25share.com/categories/linux/%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="linux" scheme="https://25share.com/tags/linux/"/>
-    
-      <category term="linux基础" scheme="https://25share.com/tags/linux%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
